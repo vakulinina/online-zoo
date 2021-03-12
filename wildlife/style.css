@@ -17,7 +17,6 @@ header {
   margin: 0 auto 0;
   padding: 19px 0;
   color: #F7F7F7;
-  background-color: rgba(247, 247, 247, 0.37);
 }
 
 main {
@@ -26,9 +25,11 @@ main {
   background-color: #cccccc;
 }
 
-section {
-  width: 1200px;
-  margin: 0 auto 0;
+h1 {
+  color: #CD6326;
+  font-size: 48px;
+  letter-spacing: 2px;
+  margin-bottom: 51px;
 }
 
 footer {
@@ -46,9 +47,19 @@ a {
   color: inherit;
 }
 
+button {
+  font-size: 23px;
+  color: #F7F7F7;
+}
+
 .header-wrap {
   display: flex;
   justify-content: space-between;
+  width: 1200px;
+  margin: 0 auto 0;
+}
+
+.content-wrap {
   width: 1200px;
   margin: 0 auto 0;
 }
@@ -82,19 +93,38 @@ a {
 .sign-in-button{
   width: 120px;
   height: 50px;
-  color: inherit;
   border: 2px solid #CD6326;
   border-radius: 5px;
   background-color: transparent;
-  font-size: 23px;
 }
 
 .survival {
-  height: 779px;
+  height: 780px;
+  padding-top: 199px;
+  color: #F7F7F7;
+  background-image: url('assets/survival-background.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   background-color: #02160b;
+}
+
+.survival-text {
+  width: 274px;
+  margin-bottom: 49px;
+  font-size: 18px;
+  line-height: 27px;
 }
 
 .footer-wrap {
   width: 1200px;
   margin: 0 auto 0;
+}
+
+.donate-button {
+  width: 160px;
+  height: 60px;
+  border: none;
+  border-radius: 5px;
+  background-color: #CD6326;
 }
