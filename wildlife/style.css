@@ -40,6 +40,14 @@ h2 {
   line-height: 72px;
 }
 
+ h3 {
+   color: #333333;
+   font-size: 27px;
+   line-height: 40px;
+   text-align: center;
+   margin-bottom: 59px;
+ }
+
 article {
   position: relative;
   width: 300px;
@@ -50,6 +58,28 @@ article {
 article img {
   position: absolute;
   top: 0;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  width: 1200px;
+  margin: 0 auto 0;
+}
+
+input {
+  width: 540px;
+  height: 60px;
+  padding: 0 15px;
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+  border-left: 1px solid;
+  border-right: none;
+  border-color: #666666;
+  background-color: transparent;
+  font-size: 23px;
+  line-height: 27px;
+
 }
 
 footer {
@@ -198,4 +228,16 @@ button {
   height: 70px;
   border: none;
   background-color: transparent;
+}
+
+.get-notified {
+  padding-bottom: 240px;
+}
+
+.send-button {
+  width: 120px;
+  height: 60px;
+  border: none;
+  border-radius: 0 5px 5px 0;
+  background-color: #CD6326;
 }
