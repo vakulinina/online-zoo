@@ -26,9 +26,10 @@ main {
 }
 
 h1 {
-  margin-bottom: 51px;
+  margin-bottom: 56px;
   color: #CD6326;
   font-size: 48px;
+  font-weight: 400;
   letter-spacing: 2px;
 }
 
@@ -38,11 +39,13 @@ h2 {
   text-align: center;
   font-size: 48px;
   line-height: 72px;
+  font-weight: 400;
 }
 
  h3 {
    color: #333333;
    font-size: 27px;
+   font-weight: 400;
    line-height: 40px;
    text-align: center;
    margin-bottom: 59px;
@@ -95,13 +98,22 @@ ul {
 }
 
 a {
+  display: flex;
+  align-items: center;
   text-decoration: none;
   color: #F7F7F7;
+  vertical-align: middle;
 }
 
 button {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
   font-size: 23px;
   color: #F7F7F7;
+}
+
+button:hover {
+  cursor: pointer;
 }
 
 .header-wrap,
@@ -125,8 +137,9 @@ button {
 }
 
 .logo-text {
-  margin-left: 15px;
+  margin: 0 15px;
   text-transform: uppercase;
+  font-family: 'Roboto', sans-serif;
   font-size: 32px;
   color: #F7F7F7;
 }
@@ -151,9 +164,17 @@ button {
   background-color: transparent;
 }
 
+.sign-in-button:hover {
+  background-color: #CD6326;
+}
+
+.sign-in-button:active {
+  background-color: #8F5613;
+}
+
 .survival {
   height: 780px;
-  padding-top: 199px;
+  padding-top: 203px;
   color: #F7F7F7;
   background-image: url('assets/survival-background.png');
   background-repeat: no-repeat;
@@ -175,6 +196,14 @@ button {
   border: none;
   border-radius: 5px;
   background-color: #CD6326;
+}
+
+.donate-button:hover {
+  background-color: #E39128;
+}
+
+.donate-button:active {
+  background-color: #8F5613;
 }
 
 .articles {
@@ -222,6 +251,8 @@ button {
 }
 
 .slider-button {
+  display: flex;
+  align-items: center;
   width: 30px;
   height: 70px;
   border: none;
@@ -237,12 +268,24 @@ button {
   height: 60px;
   border: none;
   border-radius: 0 5px 5px 0;
+  color: #F7F7F7;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
   background-color: #CD6326;
+}
+
+.send-button:hover {
+  background-color: #E39128;
+}
+
+.send-button:active {
+  background-color: #8F5613;
 }
 
 .social-links {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   width: 240px;
   margin: 0 0 0 auto;
 }
