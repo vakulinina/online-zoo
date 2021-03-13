@@ -105,6 +105,11 @@ a {
   vertical-align: middle;
 }
 
+a:hover {
+  transform: scale(1.1, 1.1);
+  transition: all 0.5s;
+}
+
 button {
   font-family: 'Roboto', sans-serif;
   font-weight: 300;
@@ -256,7 +261,19 @@ button:hover {
   width: 30px;
   height: 70px;
   border: none;
-  background-color: transparent;
+}
+
+.slider-button.left {
+  background: url('assets/slider-button-left.svg') center no-repeat transparent;
+}
+
+.slider-button.right {
+  background: url('assets/slider-button-right.svg') center no-repeat transparent;
+}
+
+.slider-button:hover {
+  transform: scale(1.1, 1.1);
+  transition: all 0.5s;
 }
 
 .get-notified {
