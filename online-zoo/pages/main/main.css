@@ -29,6 +29,10 @@ a:visited {
   color: #333333;
 }
 
+button:hover {
+  cursor: pointer;
+}
+
 h2 {
   width: 793px;
   margin-bottom: 37px;
@@ -37,6 +41,22 @@ h2 {
   font-weight: 900;
   line-height: 104px;
   color: #FEFEFE;
+}
+
+h3 {
+  margin-bottom: 30px;
+  font-size: 48px;
+  font-weight: 900;
+  line-height: 56px;
+  text-align: left;
+}
+
+p {
+  margin-bottom: 30px;
+  color: #4F4F4F;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: left;
 }
 
 .header-wrap {
@@ -57,6 +77,10 @@ h2 {
   display: flex;
   justify-content: space-between;
   width: 573px;
+}
+
+.theme-toggle:hover {
+  cursor: pointer;
 }
 
 .toggle-fill {
@@ -146,6 +170,11 @@ h2 {
   margin-bottom: 20px;
 }
 
+.slider-wrap {
+  width: 245px;
+  margin: 0 auto;
+}
+
 .slider-value {
   display: block;
   margin: 0 auto;
@@ -156,6 +185,10 @@ h2 {
   color: #FEFEFE;
 }
 
+.slider-value.dark {
+  color: #333;
+}
+
 .slider-value-total {
   font-size: 14px;
   line-height: 16px;
@@ -163,8 +196,41 @@ h2 {
 }
 
 .slider {
+  -webkit-appearance: none;
   width: 100%;
   margin-top: 14px;
+  appearance: none;
+  height: 5px;
+  background: rgba(189, 189, 189, 0.57);
+  outline: none;
+}
+
+.slider:hover {
+  background: rgba(189, 189, 189, 1);
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: calc(100%/8);
+  height: 10px;
+  background: #FEFEFE;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: calc(100%/8);
+  height: 10px;
+  background: #FEFEFE;
+  cursor: pointer;
+}
+
+.slider.dark::-webkit-slider-thumb {
+  background: #333;
+}
+
+.slider.dark::-moz-range-thumb {
+  background: #333;
 }
 
 .watch-online-btn {
@@ -191,33 +257,6 @@ h2 {
   height: 32px;
   margin-right: 5px;
   background: url('/online-zoo/assets/icon-watch.svg') no-repeat center;
-}
-
-.slider {
-  -webkit-appearance: none;
-  appearance: none;
-  height: 5px;
-  background: rgba(189, 189, 189, 0.57);
-}
-
-.slider:hover {
-  background: rgba(189, 189, 189, 1);
-}
-
-.slider::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  appearance: none;
-  width: 30px;
-  height: 10px;
-  background: #FEFEFE;
-  cursor: pointer;
-}
-
-.slider::-moz-range-thumb {
-  width: 30px;
-  height: 10px;
-  background: #FEFEFE;
-  cursor: pointer;
 }
 
 .social-links {
@@ -254,4 +293,27 @@ h2 {
 .vk {
   height: 11.4px;
   background-image: url('/online-zoo/assets/icon-vk.svg');
+}
+
+.how-it-works-wrap {
+  width: 790px;
+  margin: 0 auto;
+  padding: 100px 0;
+  text-align: center;
+}
+
+.how-it-works-image {
+  margin-bottom: 29px;
+}
+
+.how-it-works .slider::-webkit-slider-thumb {
+  width: calc(100%/4);
+}
+
+.how-it-works .slider::-moz-range-thumb {
+  width: calc(100%/4);
+}
+
+.how-it-works .watch-online-btn {
+  margin: 30px auto 0;
 }
