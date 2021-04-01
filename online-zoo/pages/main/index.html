@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/online-zoo/pages/main/main.css" type="text/css">
   <title>Online Zoo</title>
 </head>
@@ -29,6 +29,42 @@
       </label>
     </div>
   </header>
+  <main>
+    <section class="watch-online">
+      <div class="watch-online-wrap">
+        <h2>Watch your favorite animal online</h2>
+        <ul class="animals-gallery">
+          <li class="gallery-item">
+            <article class="animal-card"><img src="/online-zoo/assets/eagle.png" alt=""></article>
+          </li>
+          <li class="gallery-item">
+            <article class="animal-card selected">
+              <img src="/online-zoo/assets/panda.png" alt="">
+            </article>
+            <span class="slider-value">02/<span class="slider-value-total">08</span></span>
+            <input class="slider" id="slider" type="range" min="1" max="8" value="2">
+          </li>
+          <li class="gallery-item">
+            <article class="animal-card"><img src="/online-zoo/assets/gorilla.png" alt=""></article>
+          </li>
+          <li class="gallery-item">
+            <article class="animal-card"><img src="/online-zoo/assets/alligator.png" alt=""></article>
+          </li>
+          <li class="gallery-item">
+            <article class="animal-card"><img src="/online-zoo/assets/fox.png" alt=""></article>
+          </li>
+        </ul>
+        <button class="watch-online-btn">Watch online</button>
+        <ul class="social-links">
+          <li><a class="social-link instagram" href="https://www.instagram.com/" title="Instagram" target="_blank"></a>
+          </li>
+          <li><a class="social-link twitter" href="https://twitter.com/" title="Twitter" target="_blank"></a></li>
+          <li><a class="social-link youtube" href="https://youtube.com/" title="Youtube" target="_blank"></a></li>
+          <li><a class="social-link vk" href="https://vk.com/" title="VK" target="_blank"></a></li>
+        </ul>
+      </div>
+    </section>
+  </main>
 </body>
 
 </html>
