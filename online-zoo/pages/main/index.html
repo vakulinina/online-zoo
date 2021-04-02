@@ -38,7 +38,7 @@
             <article class="animal-card"><img src="/online-zoo/assets/eagle.png" alt=""></article>
           </li>
           <li class="gallery-item">
-            <article class="animal-card selected">
+            <article class="animal-card big">
               <img src="/online-zoo/assets/panda.png" alt="">
               <div class="animal-card-description">
                 <p class="animal-card-text">Panda’s name is Bei Bei. He is 2 years old. Bei Bei is from China. He loves
@@ -74,7 +74,7 @@
     </section>
     <section class="how-it-works">
       <div class="how-it-works-wrap">
-        <h3>How it works?</h3>
+        <h3 class="how-it-works-title">How it works?</h3>
         <p>As a voice for wildlife, we are devastated by the impact of the 2020 Australian bushfires on precious species
           and their habitat, and we are determined to assist in all aspects, including providing veterinary support and
           raising much-needed emergency funds. Zoo Online saves wildlife and inspires everyone to make conservation a
@@ -110,6 +110,49 @@
               planet, and deserve a life of dignity and compassion.</p>
           </li>
         </ul>
+      </div>
+    </section>
+    <section class="pets-in-zoo">
+      <div class="pets-in-zoo-wrap">
+        <h3>Pets in Zoo</h3>
+        <div class="pets-in-zoo-carousel">
+          <button class="previous-btn"></button>
+          <ul class="carousel-items">
+            <li class="carousel-item" class="carousel-item">
+              <article class="animal-card">
+                <img src="/online-zoo/assets/panda.png" alt="">
+                <div class="animal-card-description">
+                  <p class="animal-card-text">Panda’s name is Bei Bei. He is 2 years old. Bei Bei is from China. He
+                    loves
+                    bamboos.</p>
+                  <button class="watch-btn-small">Watch online</button>
+                  <button class="donate-btn-small">Donate</button>
+                </div>
+              </article>
+            </li>
+            <li class="carousel-item">
+              <article class="animal-card">
+                <img src="/online-zoo/assets/eagle.png" alt="">
+              </article>
+            </li>
+            <li class="carousel-item">
+              <article class="animal-card">
+                <img src="/online-zoo/assets/gorilla.png" alt="">
+              </article>
+            </li>
+            <li class="carousel-item">
+              <article class="animal-card">
+                <img src="/online-zoo/assets/alligator.png" alt="">
+              </article>
+            </li>
+          </ul>
+          <button class="next-btn"></button>
+        </div>
+        <div class="slider-wrap">
+          <span class="slider-value dark">01/<span class="slider-value-total">08</span></span>
+          <input class="slider dark" id="slider" type="range" min="1" max="8" value="1">
+        </div>
+        <button class="choose-favorite-btn">Choose your favorite</button>
       </div>
     </section>
   </main>
