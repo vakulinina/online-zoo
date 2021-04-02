@@ -51,6 +51,15 @@ h3 {
   text-align: left;
 }
 
+h4 {
+  margin: 15px 0;
+  color: #333333;
+  font-size: 20px;
+  font-weight: 900;
+  line-height: 23px;
+  text-align: center;
+}
+
 p {
   margin-bottom: 30px;
   color: #4F4F4F;
@@ -231,7 +240,6 @@ p {
   background-size: contain;
 }
 
-
 .selected {
   width: 245px;
   height: 352px;
@@ -384,4 +392,29 @@ p {
 
 .how-it-works .watch-btn {
   margin: 30px auto 0;
+}
+
+.what-inspires {
+  background-color: #F2F2F2;
+}
+
+.what-inspires-wrap {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 100px 0;
+}
+
+.inspire-list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.inspire-card {
+  width: 380px;
+  text-align: center;
+}
+
+.inspire-card-icon {
+  width: 80px;
+  height: 80px;
 }
