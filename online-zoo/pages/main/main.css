@@ -309,13 +309,11 @@ p {
   background: #333;
 }
 
-.watch-btn {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
+.btn-big {
+  display: block;
   width: 245px;
   height: 55px;
-  margin-left: 13%;
+  margin: 0 auto;
   border: none;
   border-radius: 3px;
   color: #FFF;
@@ -324,6 +322,14 @@ p {
   font-weight: 800;
   line-height: 21px;
   text-transform: uppercase;
+}
+
+.watch-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 13%;
+  border: none;
 }
 
 .watch-btn::before {
@@ -479,18 +485,7 @@ p {
 }
 
 .choose-favorite-btn {
-  display: block;
-  width: 245px;
-  height: 55px;
   margin: 30px auto 0;
-  border: none;
-  border-radius: 3px;
-  color: #FFF;
-  background: linear-gradient(107deg, #4BD8B5 -14.32%, #49D6DF 100%);
-  font-size: 18px;
-  font-weight: 800;
-  line-height: 21px;
-  text-transform: uppercase;
 }
 
 .pay-feed {
@@ -548,19 +543,4 @@ p {
   font-weight: bold;
   line-height: 23px;
   text-align: center;
-}
-
-.donate-btn {
-  display: block;
-  width: 245px;
-  height: 55px;
-  margin: 0 auto;
-  border: none;
-  border-radius: 3px;
-  color: #FFF;
-  background: linear-gradient(107deg, #4BD8B5 -14.32%, #49D6DF 100%);
-  font-size: 18px;
-  font-weight: 800;
-  line-height: 21px;
-  text-transform: uppercase;
 }
