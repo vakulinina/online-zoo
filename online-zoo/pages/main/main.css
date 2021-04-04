@@ -148,7 +148,7 @@ address {
 }
 
 .watch-online {
-  background: url('/online-zoo/assets/watch-online-background.png') center no-repeat;
+  background: url('../../assets/watch-online-background.png') center no-repeat;
   background-size: cover;
   overflow-x: hidden;
 }
@@ -170,7 +170,7 @@ address {
   align-items: center;
   height: 421px;
   padding-left: 89px;
-  background: url('/online-zoo/assets/gallery-line-background.svg') center no-repeat;
+  background: url('../../assets/gallery-line-background.svg') center no-repeat;
   background-size: contain;
 }
 
@@ -355,7 +355,7 @@ address {
   width: 32px;
   height: 32px;
   margin-right: 5px;
-  background: url('/online-zoo/assets/icon-watch.svg') no-repeat center;
+  background: url('../../assets/icon-watch.svg') no-repeat center;
 }
 
 .social-links {
@@ -376,22 +376,22 @@ address {
 }
 
 .instagram {
-  background-image: url('/online-zoo/assets/icon-instagram.svg');
+  background-image: url('../../assets/icon-instagram.svg');
 }
 
 .twitter {
   height: 16.3px;
-  background-image: url('/online-zoo/assets/icon-twitter.svg');
+  background-image: url('../../assets/icon-twitter.svg');
 }
 
 .youtube {
   height: 13.75px;
-  background-image: url('/online-zoo/assets/icon-youtube.svg');
+  background-image: url('../../assets/icon-youtube.svg');
 }
 
 .vk {
   height: 11.4px;
-  background-image: url('/online-zoo/assets/icon-vk.svg');
+  background-image: url('../../assets/icon-vk.svg');
 }
 
 .how-it-works-wrap {
@@ -477,7 +477,7 @@ address {
   height: 30px;
   margin-right: 20px;
   border: none;
-  background: url('/online-zoo/assets/icon-previous.svg') center no-repeat;
+  background: url('../../assets/icon-previous.svg') center no-repeat;
 }
 
 .next-btn {
@@ -485,7 +485,7 @@ address {
   height: 30px;
   margin-left: 20px;
   border: none;
-  background: url("/online-zoo/assets/icon-next.svg") center no-repeat;
+  background: url("../../assets/icon-next.svg") center no-repeat;
 }
 
 .pets-in-zoo-carousel .animal-card {
@@ -605,7 +605,7 @@ address {
   margin-bottom: 17px;
   border: 1px solid #BDBDBD;
   border-radius: 50%;
-  background: url("/online-zoo/assets/icon-user.svg") center no-repeat;
+  background: url("../../assets/icon-user.svg") center no-repeat;
   overflow: hidden;
 }
 
@@ -645,7 +645,7 @@ address {
   width: 100%;
   height: 498px;
   margin-bottom: 35px;
-  background: url("/online-zoo/assets/map.svg")center no-repeat;
+  background: url("../../assets/map.svg")center no-repeat;
   background-size: contain;
 }
 
@@ -660,7 +660,7 @@ address {
 }
 
 .map-marker:hover .marker-icon {
-  background: url("/online-zoo/assets/icon-map-marker-active.svg") center no-repeat;
+  background: url("../../assets/icon-map-marker-active.svg") center no-repeat;
 }
 
 .map-marker:hover .tooltip {
@@ -671,7 +671,7 @@ address {
   position: relative;
   width: 93.4px;
   height: 93.4px;
-  background: url("/online-zoo/assets/icon-map-marker.svg") center no-repeat;
+  background: url("../../assets/icon-map-marker.svg") center no-repeat;
 }
 
 .marker-photo-wrap {
