@@ -12,15 +12,18 @@
 
 <body>
   <header>
+    <h1 class="visually-hidden">Online Zoo</h1>
     <div class="header-wrap">
-      <img class="logo" src="../../assets/logo-dark.svg" alt="">
+      <a class="logo" href="../main/index.html">
+        <img src="../../assets/logo-dark.svg" alt="">
+      </a>
       <nav>
         <ul class="nav-links">
           <li><a class="nav-link nav-link-active" href="">About</a></li>
-          <li><a class="nav-link" href="">Zoos</a></li>
-          <li><a class="nav-link" href="">Map</a></li>
-          <li><a class="nav-link" href="">Contact Us</a></li>
-          <li><a class="nav-link" href="">Design</a></li>
+          <li><a class="nav-link" href="../zoos/panda.html">Zoos</a></li>
+          <li><a class="nav-link" href="../map/map.html">Map</a></li>
+          <li><a class="nav-link" href="#contact-form">Contact Us</a></li>
+          <li><a class="nav-link" href="https://www.figma.com/file/HKt5Nlx0jghQtJp6jW9q8F/zooApp">Design</a></li>
         </ul>
       </nav>
       <label class="theme-toggle">
@@ -293,26 +296,26 @@
   </main>
   <footer>
     <div class="footer-wrap">
-      <img class="footer-logo" src="../../assets/logo-light.svg" alt="">
+      <a class="logo" href="../main/index.html"><img class="footer-logo" src="../../assets/logo-light.svg" alt=""></a>
       <nav class="nav-footer">
         <ul class="nav-links-footer">
-          <li><a class="nav-link-footer" href="">About</a></li>
-          <li><a class="nav-link-footer" href="">Zoos</a></li>
-          <li><a class="nav-link-footer" href="">Map</a></li>
-          <li><a class="nav-link-footer" href="">Design</a></li>
+          <li><a class="nav-link-footer" href="../main/index.html">About</a></li>
+          <li><a class="nav-link-footer" href="../zoos/panda.html">Zoos</a></li>
+          <li><a class="nav-link-footer" href="../map/map.html">Map</a></li>
+          <li><a class="nav-link-footer" href="https://www.figma.com/file/HKt5Nlx0jghQtJp6jW9q8F/zooApp" target="_blank">Design</a></li>
         </ul>
         <button class="btn-big for-volunteers-btn">Donate for volunteers</button>
       </nav>
-      <form class="contact-form" action="">
+      <form class="contact-form" id="contact-form" action="">
         <h4>Contact us</h4>
-        <input class="contact-input" type="text" id="" placeholder="Name"><br>
-        <input class="contact-input" type="email" id="" placeholder="Email"><br>
+        <input class="contact-input" type="text" id="" placeholder="Name" required><br>
+        <input class="contact-input" type="email" id="" placeholder="Email" required><br>
         <fieldset>
           <legend>Please enter your message</legend>
-          <textarea class="contact-textarea" id="contact-textarea" maxlength="280"></textarea>
+          <textarea class="contact-textarea" id="contact-textarea" maxlength="280" required></textarea>
         </fieldset>
-        <label class="personal-data-label" for="personal-data-checkbox">
-          <input class="personal-data-checkbox" type="checkbox" id="personal-data-checkbox" required>
+        <label class="agree-label" for="agree-checkbox">
+          <input class="agree-checkbox" type="checkbox" id="agree-checkbox" required>
           <span class='custom-checkbox'>
             <svg viewBox="0 0 512 512" width="100" title="check">
               <path
@@ -324,8 +327,8 @@
         <button class="send-btn" type="submit">Send</button>
       </form>
       <div class="contacts">
+        <p class="address-title">ZOO Online Centre</p>
         <address>
-          <p class="address-title">ZOO Online Centre</p>
           <p class="address-text">132, Address District, Street</p>
           <p class="address-text">Open Daily 10:00 am - 5:00 pm</p>
           <ul class="contact-links">
