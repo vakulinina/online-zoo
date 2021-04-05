@@ -179,15 +179,21 @@ address {
   padding: 206px 0 111px;
 }
 
-.animals-gallery {
+.animals-gallery-wrap {
   position: absolute;
   left: 42.5%;
-  top: 406px;
+  top: 407px;
+}
+
+.animals-gallery-wrap .slider-wrap {
+  margin-left: 323px;
+}
+
+.animals-gallery {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  height: 421px;
-  padding-left: 89px;
+  padding-left: 90px;
   background: url('../../assets/gallery-line-background.svg') center no-repeat;
   background-size: contain;
 }
@@ -276,10 +282,10 @@ address {
   background-size: contain;
 }
 
-.big {
+.animal-card-active {
   width: 245px;
   height: 352px;
-  margin-bottom: 20px;
+  margin-bottom: 24px;
 }
 
 .slider-wrap {
@@ -430,11 +436,11 @@ address {
 }
 
 .how-it-works-image {
-  margin-bottom: 29px;
+  margin-bottom: 27px;
 }
 
 .how-it-works .slider-wrap {
-  margin-bottom: 32px;
+  margin-bottom: 28px;
 }
 
 .how-it-works .slider::-webkit-slider-thumb {
@@ -608,7 +614,7 @@ address {
 }
 
 .testimonials-title {
-  margin-bottom: 50px;
+  margin-bottom: 60px;
 }
 
 .testimonials-carousel {
@@ -624,7 +630,7 @@ address {
 .testimonial-card {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   height: 310px;
   margin-right: 39px;
