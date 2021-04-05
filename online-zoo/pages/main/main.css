@@ -698,6 +698,7 @@ address {
   z-index: 2;
 }
 
+.map-marker-active .marker-icon,
 .map-marker:hover .marker-icon {
   background: url("../../assets/icon-map-marker-active.svg") center no-repeat;
 }

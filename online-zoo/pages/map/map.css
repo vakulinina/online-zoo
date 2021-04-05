@@ -72,3 +72,12 @@
   width: 137px;
   height: 137px;
 }
+
+.map-marker:hover .marker-icon {
+  background: url("../../assets/icon-map-marker.svg") center no-repeat;
+}
+
+.map-marker-active .marker-icon,
+.map-marker-active:hover .marker-icon {
+  background: url("../../assets/icon-map-marker-active.svg") center no-repeat;
+}
