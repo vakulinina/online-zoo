@@ -424,7 +424,7 @@ address {
 }
 
 .how-it-works .slider-wrap {
-  margin-bottom: 30px;
+  margin-bottom: 30px auto 0;
 }
 
 .what-inspires {
