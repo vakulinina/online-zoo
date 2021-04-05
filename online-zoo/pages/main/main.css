@@ -102,7 +102,7 @@ address {
   text-decoration: none;
 }
 
-.nav-link.active {
+.nav-link-active {
   font-weight: 900;
   border-bottom: 1px solid #333333;
 }
