@@ -345,8 +345,12 @@ address {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-left: 13%;
+  margin: 0 auto 0;
   border: none;
+}
+
+.watch-online .watch-btn {
+  margin-left: 13%;
 }
 
 .watch-btn::before {
@@ -417,8 +421,8 @@ address {
   width: calc(100%/4);
 }
 
-.how-it-works .watch-btn {
-  margin: 30px auto 0;
+.how-it-works .slider-wrap {
+  margin-bottom: 30px;
 }
 
 .what-inspires {
