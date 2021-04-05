@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../main/main.css">
   <link rel="stylesheet" href="map.css">
-  <title>Choose your favorite</title>
+  <title>Map</title>
 </head>
 
 <body>
@@ -18,7 +18,7 @@
       </a>
       <nav>
         <ul class="nav-links">
-          <li><a class="nav-link" href="">About</a></li>
+          <li><a class="nav-link" href="../main/index.html">About</a></li>
           <li><a class="nav-link" href="../zoos/panda.html">Zoos</a></li>
           <li><a class="nav-link nav-link-active" href="../map/map.html">Map</a></li>
           <li><a class="nav-link" href="#contact-form">Contact Us</a></li>
@@ -47,13 +47,13 @@
         <button class="previous-btn"></button>
         <ul class="nav-animals__list">
           <li class="nav-animals__animal">
-            <a class="nav-animals__link" title="Panda" href="">
-              <img class="nav-animals__animal-img" src="../../assets/panda.png">
+            <a class="nav-animals__link" title="Gorilla" href="">
+              <img class="nav-animals__animal-img" src="../../assets/gorilla.png">
             </a>
           </li>
           <li class="nav-animals__animal nav-animals__animal--selected">
-            <a class="nav-animals__link nav-animals__link-active" title="Eagle" href="">
-              <img class="nav-animals__animal-img" src="../../assets/eagle.png">
+            <a class="nav-animals__link nav-animals__link-active" title="Panda" href="">
+              <img class="nav-animals__animal-img" src="../../assets/panda.png">
             </a>
           </li>
           <li class="nav-animals__animal">
@@ -62,8 +62,8 @@
             </a>
           </li>
           <li class="nav-animals__animal">
-            <a class="nav-animals__link" title="Gorilla" href="">
-              <img class="nav-animals__animal-img" src="../../assets/gorilla.png">
+            <a class="nav-animals__link" title="Eagle" href="">
+              <img class="nav-animals__animal-img" src="../../assets/eagle.png">
             </a>
           </li>
           <li class="nav-animals__animal">
@@ -100,70 +100,30 @@
               <img class="marker-photo" src="../../assets/eagle.png" alt="">
             </div>
           </div>
-          <div class="tooltip">
-            <div class="tooltip-image-wrap">
-              <img class="tooltip-image" src="../../assets/eagle.png" alt="">
-            </div>
-            <div class="tooltip-description">
-              <p class="tooltip-title">West End Bald Eagle</p>
-              <p class="tooltip-text"><b>Region:</b> on an island near Los Angeles</p>
-              <p class="tooltip-text"><b>Population:</b> more than 270 pairs in 2013</p>
-            </div>
-          </div>
         </div>
-        <div class="map-marker alligator-marker">
+        <div class="map-marker alligator-marker" title="Alligator">
           <div class="marker-icon">
             <div class="marker-photo-wrap">
               <img class="marker-photo" src="../../assets/alligator.png" alt="">
             </div>
           </div>
-          <div class="tooltip">
-            <div class="tooltip-image-wrap">
-              <img class="tooltip-image" src="../../assets/alligator.png" alt="">
-            </div>
-            <div class="tooltip-description">
-              <p class="tooltip-title">Alligator</p>
-              <p class="tooltip-text"><b>Region:</b> Florida</p>
-              <p class="tooltip-text"><b>Population:</b> Roughly 1.25 million </p>
-            </div>
-          </div>
         </div>
-        <div class="map-marker gorilla-marker">
+        <div class="map-marker gorilla-marker" title="Alligator">
           <div class="marker-icon">
             <div class="marker-photo-wrap">
               <img class="marker-photo" src="../../assets/gorilla.png" alt="">
             </div>
           </div>
-          <div class="tooltip tooltip-left">
-            <div class="tooltip-image-wrap">
-              <img class="tooltip-image" src="../../assets/gorilla.png" alt="">
-            </div>
-            <div class="tooltip-description">
-              <p class="tooltip-title">Gorilla</p>
-              <p class="tooltip-text"><b>Region:</b> Cameroun</p>
-              <p class="tooltip-text"><b>Population:</b> over 100,000</p>
-            </div>
-          </div>
         </div>
-        <div class="map-marker panda-marker">
+        <div class="map-marker panda-marker map-marker-active" title="Panda">
           <div class="marker-icon">
             <div class="marker-photo-wrap">
               <img class="marker-photo" src="../../assets/panda.png" alt="">
             </div>
           </div>
-          <div class="tooltip tooltip-left">
-            <div class="tooltip-image-wrap">
-              <img class="tooltip-image" src="../../assets/panda.png" alt="">
-            </div>
-            <div class="tooltip-description">
-              <p class="tooltip-title">Panda</p>
-              <p class="tooltip-text"><b>Region:</b> mountains of southwest China</p>
-              <p class="tooltip-text"><b>Population:</b> About 1,590 individuals</p>
-            </div>
-          </div>
         </div>
       </div>
-      <button class="btn-big watch-btn">Watch online</button>
+      <a class="btn-link" href="../zoos/panda.html"><button class="btn-big watch-btn">Watch online</button></a>
     </div>
   </main>
   <footer>
