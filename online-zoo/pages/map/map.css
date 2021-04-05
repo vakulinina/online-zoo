@@ -1,0 +1,74 @@
+.nav-animals {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto 32px;
+}
+
+.nav-animals__list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.previous-btn {
+  margin-right: 38px;
+}
+
+.next-btn {
+  margin-left: 12px;
+}
+
+.nav-animals__animal-img {
+  border-radius: 50%;
+  object-fit: cover;
+  width: 108px;
+  height: 108px;
+}
+
+.nav-animals__animal {
+  border-radius: 50%;
+  margin-right: 30px;
+}
+
+.nav-animals__link {
+  border-radius: 50%;
+}
+
+.nav-animals__animal--selected {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 157px;
+  width: 157px;
+  margin: 0 5px 0 -25px;
+  border-radius: 50%;
+  border-width: 3px;
+  border-style: solid;
+  border-color: transparent;
+  background-image: -webkit-linear-gradient(white, white), -webkit-linear-gradient(to right, #07EEE0 0%, #DF496D 100%);
+  background-image: -moz-linear-gradient(white, white), -moz-linear-gradient(to right, #07EEE0 0%, #DF496D 100%);
+  background-image: -o-linear-gradient(white, white), -o-linear-gradient(to right, #07EEE0 0%, #DF496D 100%);
+  background-image: linear-gradient(white, white), linear-gradient(to right, #07EEE0 0%, #DF496D 100%);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+}
+
+.nav-animals__animal--selected .nav-animals__link {
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-animals__link-active {
+  cursor: inherit;
+}
+
+.nav-animals__animal--selected .nav-animals__animal-img {
+  border-radius: 50%;
+  object-fit: cover;
+  width: 137px;
+  height: 137px;
+}

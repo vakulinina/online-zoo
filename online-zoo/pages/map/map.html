@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../main/main.css">
+  <link rel="stylesheet" href="map.css">
   <title>Choose your favorite</title>
 </head>
 
@@ -39,8 +40,54 @@
         this
         planet, and deserve a life of dignity and compassion.As a voice for wildlife, we are devastated by the impact of
         the 2020 Australian bushfires on precious species and their habitat.</p>
+      <div class="nav-animals">
+        <button class="previous-btn"></button>
+        <ul class="nav-animals__list">
+          <li class="nav-animals__animal">
+            <a class="nav-animals__link" title="Panda" href="">
+              <img class="nav-animals__animal-img" src="../../assets/panda.png">
+            </a>
+          </li>
+          <li class="nav-animals__animal nav-animals__animal--selected">
+            <a class="nav-animals__link nav-animals__link-active" title="Eagle" href="">
+              <img class="nav-animals__animal-img" src="../../assets/eagle.png">
+            </a>
+          </li>
+          <li class="nav-animals__animal">
+            <a class="nav-animals__link" title="Alligator" href="">
+              <img class="nav-animals__animal-img" src="../../assets/alligator.png">
+            </a>
+          </li>
+          <li class="nav-animals__animal">
+            <a class="nav-animals__link" title="Gorilla" href="">
+              <img class="nav-animals__animal-img" src="../../assets/gorilla.png">
+            </a>
+          </li>
+          <li class="nav-animals__animal">
+            <a class="nav-animals__link" title="Fox" href="">
+              <img class="nav-animals__animal-img" src="../../assets/fox.png">
+            </a>
+          </li>
+          <li class="nav-animals__animal">
+            <a class="nav-animals__link" title="Elephant" href="">
+              <img class="nav-animals__animal-img" src="../../assets/elephant.png">
+            </a>
+          </li>
+          <li class="nav-animals__animal">
+            <a class="nav-animals__link" title="Sloth" href="">
+              <img class="nav-animals__animal-img" src="../../assets/sloth.png">
+            </a>
+          </li>
+          <li class="nav-animals__animal">
+            <a class="nav-animals__link" title="Leopard" href="">
+              <img class="nav-animals__animal-img" src="../../assets/leopard.png">
+            </a>
+          </li>
+        </ul>
+        <button class="next-btn"></button>
+      </div>
       <div class="slider-wrap">
-        <span class="slider-value dark">01/<span class="slider-value-total">08</span></span>
+        <span class="slider-value dark">02/<span class="slider-value-total">08</span></span>
         <input class="slider dark" id="slider" type="range" min="1" max="8" value="2">
       </div>
       <div class="map-container">
