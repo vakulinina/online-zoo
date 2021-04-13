@@ -5,8 +5,14 @@
   font-family: 'Roboto', sans-serif;
 }
 
+body {
+  min-width: 320px;
+}
+
 header {
   position: relative;
+  display: flex;
+  justify-content: center;
   z-index: 1;
   width: 100%;
   height: 94px;
@@ -92,9 +98,9 @@ address {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1620px;
+  flex-basis: 1620px;
   height: 94px;
-  margin: 0 auto;
+  margin: 0 150px;
 }
 
 .logo {
@@ -102,10 +108,17 @@ address {
   height: 42px;
 }
 
+.nav-wrap {
+  display: flex;
+  margin: 0 70px;
+  flex-basis: 573px;
+  flex-shrink: 2;
+}
+
 .nav-links {
   display: flex;
   justify-content: space-between;
-  width: 573px;
+  width: 100%;
 }
 
 .nav-link {
@@ -137,14 +150,6 @@ address {
   transition: all 1s;
 }
 
-.toggle-input {
-  position: absolute;
-  clip: rect(0 0 0 0);
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-}
-
 .toggle-fill::after {
   content: "";
   display: inline-block;
@@ -165,8 +170,19 @@ address {
   transform: translateX(22px);
 }
 
+.menu-btn {
+  display: none;
+}
+
+.menu-btn-fill {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background: url("data:image/svg+xml,%3Csvg width='40' height='21' viewBox='0 0 40 21' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cline y1='1.5' x2='40' y2='1.5' stroke='%23333333' stroke-width='3'/%3E%3Cline y1='10.5' x2='40' y2='10.5' stroke='%23333333' stroke-width='3'/%3E%3Cline x1='7' y1='19.5' x2='40' y2='19.5' stroke='%23333333' stroke-width='3'/%3E%3C/svg%3E%0A") center no-repeat;
+}
+
 .watch-online {
-  background: url('../../assets/watch-online-background.png') center no-repeat;
+  background: url("../../assets/watch-online-background.png") center no-repeat;
   background-size: cover;
   overflow-x: hidden;
 }
@@ -429,6 +445,7 @@ address {
   margin: 0 auto;
   padding: 100px 0;
   text-align: center;
+  overflow: hidden;
 }
 
 .how-it-works-title {
@@ -484,6 +501,7 @@ address {
   max-width: 1300px;
   margin: 0 auto;
   padding: 100px 0;
+  overflow: hidden;
 }
 
 .pets-in-zoo-carousel {
@@ -552,6 +570,7 @@ address {
 
 .pay-feed {
   background-color: #F2F2F2;
+  overflow: hidden;
 }
 
 .pay-feed-wrap {
@@ -801,6 +820,7 @@ address {
 
 footer {
   background-color: #333333;
+  overflow: hidden;
 }
 
 .footer-wrap {
@@ -1027,4 +1047,58 @@ legend {
 .choose-favorite-text {
   max-width: 790px;
   margin: 0 auto 54px;
+}
+
+@media screen and (max-width: 1199px) {
+  .header-wrap {
+    margin: 0 20px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .nav-wrap {
+    justify-content: flex-end;
+    order: 3;
+    flex-basis: 0;
+    margin: 0 0 0 34px;
+  }
+
+  .nav-links {
+    visibility: hidden;
+    position: absolute;
+    display: block;
+    top: 94px;
+    right: 0;
+    width: 300px;
+    height: 100vh;
+    padding-right: 20px;
+    background-color: #fff;
+    text-align: right;
+    opacity: 0;
+    transition: all 0.3s ease-out;
+  }
+
+  .menu-btn-input:checked ~ .nav-links {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .nav-link {
+    line-height: 54px;
+  }
+
+  .theme-toggle {
+    margin: 0 0 0 auto;
+    order: 1;
+  }
+
+  .menu-btn {
+    display: inline-block;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .header-wrap {
+    margin: 0 10px;
+  }
 }

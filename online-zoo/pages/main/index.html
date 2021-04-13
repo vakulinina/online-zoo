@@ -17,7 +17,9 @@
       <a class="logo" href="../main/index.html">
         <img src="../../assets/logo-dark.svg" alt="Online Zoo">
       </a>
-      <nav>
+      <nav class="nav-wrap">
+        <label class="menu-btn" for="menu-btn-input"><span class="menu-btn-fill"></span></label>
+        <input class="menu-btn-input visually-hidden" id="menu-btn-input" type="checkbox">
         <ul class="nav-links">
           <li><a class="nav-link nav-link-active" href="../main/index.html">About</a></li>
           <li><a class="nav-link" href="../zoos/panda.html">Zoos</a></li>
@@ -27,7 +29,7 @@
         </ul>
       </nav>
       <label class="theme-toggle">
-        <input class="toggle-input" type="checkbox">
+        <input class="toggle-input visually-hidden" type="checkbox">
         <span class="toggle-fill"></span>
       </label>
     </div>
