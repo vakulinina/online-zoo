@@ -7,6 +7,7 @@
 
 body {
   min-width: 320px;
+  overflow-x: hidden;
 }
 
 header {
@@ -41,7 +42,7 @@ h2 {
   margin-left: 13%;
   font-size: 89px;
   font-weight: 900;
-  line-height: 104px;
+  line-height: 1.17em;
   color: #fefefe;
 }
 
@@ -49,7 +50,7 @@ h3 {
   margin-bottom: 30px;
   font-size: 48px;
   font-weight: 900;
-  line-height: 56px;
+  line-height: 1.17em;
   text-align: center;
 }
 
@@ -58,7 +59,7 @@ h4 {
   color: #fefefe;
   font-size: 20px;
   font-weight: 900;
-  line-height: 23px;
+  line-height: 1.15em;
 }
 
 h5 {
@@ -66,7 +67,7 @@ h5 {
   color: #333;
   font-size: 20px;
   font-weight: 900;
-  line-height: 23px;
+  line-height: 1.15em;
   text-align: center;
 }
 
@@ -74,7 +75,7 @@ p {
   margin-bottom: 30px;
   color: #4f4f4f;
   font-size: 14px;
-  line-height: 16px;
+  line-height: 1.15em;
   text-align: left;
 }
 
@@ -182,6 +183,8 @@ address {
 }
 
 .watch-online {
+  display: flex;
+  justify-content: center;
   background: url("../../assets/watch-online-background.png") center no-repeat;
   background-size: cover;
   overflow-x: hidden;
@@ -189,9 +192,9 @@ address {
 
 .watch-online-wrap {
   position: relative;
-  max-width: 1620px;
+  flex-basis: 1620px;
   height: 100%;
-  margin: 0 auto;
+  margin: 0 150px;
   padding: 206px 0 111px;
 }
 
@@ -209,15 +212,19 @@ address {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  padding-left: 90px;
+  padding-left: 135px;
   background: url("../../assets/gallery-line-background.svg") center no-repeat;
   background-size: contain;
 }
 
 .gallery-item {
   cursor: pointer;
-  margin-left: 46px;
+  margin-right: 46px;
   filter: drop-shadow(5px 4px 50px rgba(152, 157, 198, 0.25));
+}
+
+.gallery-item:last-child {
+  margin-right: 0;
 }
 
 .animal-card {
@@ -247,7 +254,7 @@ address {
   color: #fff;
   margin-bottom: 14px;
   font-size: 14px;
-  line-height: 16px;
+  line-height: 1.17em;
   overflow: hidden;
   text-overflow: ellipsis;
 }
@@ -315,7 +322,7 @@ address {
   text-align: center;
   font-size: 24px;
   font-weight: 900;
-  line-height: 28px;
+  line-height: 1.17em;
   color: #fefefe;
 }
 
@@ -325,7 +332,7 @@ address {
 
 .slider-value-total {
   font-size: 14px;
-  line-height: 16px;
+  line-height: 1.15em;
   color: #bdbdbd;
 }
 
@@ -379,7 +386,7 @@ address {
   background: linear-gradient(107deg, #4bd8b5 -14.32%, #49d6df 100%);
   font-size: 18px;
   font-weight: 800;
-  line-height: 21px;
+  line-height: 1.17em;
   text-transform: uppercase;
 }
 
@@ -622,7 +629,7 @@ address {
   color: #4f4f4f;
   font-size: 20px;
   font-weight: bold;
-  line-height: 23px;
+  line-height: 1.15em;
   text-align: center;
 }
 
@@ -682,7 +689,7 @@ address {
   margin-bottom: 17px;
   font-size: 20px;
   font-weight: 900;
-  line-height: 23px;
+  line-height: 1.15em;
   color: #333;
 }
 
@@ -811,7 +818,7 @@ address {
   color: #333;
   font-size: 18px;
   font-weight: 900;
-  line-height: 21px;
+  line-height: 1.17em;
 }
 
 .tooltip-text {
@@ -895,7 +902,7 @@ legend {
   margin-left: 5px;
   padding: 0 5px 0 3px;
   font-size: 12px;
-  line-height: 14px;
+  line-height: 1.17em;
 }
 
 .contact-textarea {
@@ -914,7 +921,7 @@ legend {
   align-items: center;
   margin-bottom: 20px;
   font-size: 12px;
-  line-height: 14px;
+  line-height: 1.17em;
 }
 
 .agree-checkbox {
@@ -960,7 +967,7 @@ legend {
   margin-left: 259px;
   font-size: 14px;
   font-weight: 500;
-  line-height: 16px;
+  line-height: 1.15em;
   border: none;
   background: none;
   text-transform: uppercase;
@@ -983,7 +990,7 @@ legend {
   margin-bottom: 35px;
   font-weight: 500;
   font-size: 14px;
-  line-height: 16px;
+  line-height: 1.15em;
   text-transform: uppercase;
   color: #fefefe;
 }
@@ -993,7 +1000,7 @@ legend {
   color: #fefefe;
   font-weight: 400;
   font-size: 14px;
-  line-height: 16px;
+  line-height: 1.15em;
 }
 
 .contact-links {
@@ -1006,7 +1013,7 @@ legend {
   color: #fefefe;
   font-weight: 400;
   font-size: 14px;
-  line-height: 16px;
+  line-height: 1.15em;
 }
 
 .social-links-footer {
@@ -1027,7 +1034,7 @@ legend {
 .copyright-text {
   margin-bottom: 5px;
   font-size: 12px;
-  line-height: 14px;
+  line-height: 1.17em;
 }
 
 .choose-favorite-wrap {
@@ -1049,9 +1056,71 @@ legend {
   margin: 0 auto 54px;
 }
 
+@media screen and (max-width: 1620px) {
+  h2 {
+    margin-left: 0;
+  }
+
+  .watch-online-wrap {
+    margin: 0 150px;
+    padding: 128px 0 72px;
+  }
+
+  .watch-online .watch-btn {
+    margin-left: 0;
+  }
+
+  .animals-gallery-wrap {
+    top: 434px;
+    left: 36%;
+  }
+
+  .gallery-item {
+    margin-right: 30px;
+  }
+
+  .animal-card {
+    width: 180px;
+    height: 261px;
+  }
+
+  .animal-card-active {
+    width: 245px;
+    height: 352px;
+  }
+
+  .animals-gallery-wrap .slider-wrap {
+    margin-left: 345px;
+  }
+
+  .social-links {
+    margin-top: 320px;
+  }
+}
+
 @media screen and (max-width: 1199px) {
+  h2 {
+    width: 599px;
+    margin-bottom: 30px;
+    font-size: 64px;
+  }
+
   .header-wrap {
     margin: 0 20px;
+  }
+
+  .watch-online-wrap {
+    margin: 0 20px;
+    padding: 122px 0 100px;
+  }
+
+  .animals-gallery-wrap {
+    top: 408px;
+    left: 51px;
+  }
+
+  .social-links {
+    margin-top: 369px;
   }
 }
 
@@ -1084,7 +1153,7 @@ legend {
   }
 
   .nav-link {
-    line-height: 54px;
+    line-height: 3.38em;
   }
 
   .theme-toggle {
@@ -1095,10 +1164,101 @@ legend {
   .menu-btn {
     display: inline-block;
   }
+
+  .animals-gallery {
+    padding-left: 71px;
+  }
+
+  .animals-gallery-wrap .slider-wrap {
+    margin-left: 281px;
+  }
+}
+
+@media screen and (max-width: 639px) {
+  h2 {
+    width: 100%;
+    font-size: 48px;
+    margin-bottom: 15px;
+  }
+
+  .watch-online-wrap {
+    padding: 92px 0 50px;
+  }
+
+  .watch-online .watch-btn {
+    margin-bottom: 339px;
+  }
+
+  .animals-gallery-wrap {
+    top: 366px;
+    left: -6px;
+    margin-bottom: 100px;
+  }
+
+  .animals-gallery {
+    padding-left: 21px;
+  }
+
+  .gallery-item {
+    margin-right: 9px;
+  }
+
+  .animal-card {
+    width: 113px;
+    height: 164px;
+  }
+
+  .animal-card-active {
+    width: 140px;
+    height: 201px;
+    margin-bottom: 15px;
+  }
+
+  .animal-card-description {
+    padding: 75px 4px 71px 8px;
+  }
+
+  .animal-card-text {
+    margin-bottom: 6px;
+    font-size: 12px;
+    font-weight: 400;
+  }
+
+  .watch-btn-small {
+    width: 99px;
+    margin-bottom: 6px;
+    font-size: 10px;
+  }
+
+  .donate-btn-small {
+    width: 65px;
+    font-size: 10px;
+  }
+
+  .watch-online .slider-wrap {
+    width: 140px;
+    margin-left: 143px;
+  }
+
+  .slider {
+    margin-top: 0;
+  }
+
+  .slider-value {
+    margin-bottom: -7px;
+  }
+
+  .social-links {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 320px) {
   .header-wrap {
+    margin: 0 10px;
+  }
+
+  .watch-online-wrap {
     margin: 0 10px;
   }
 }
