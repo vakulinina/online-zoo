@@ -251,8 +251,9 @@ address {
 }
 
 .animal-card-text {
-  color: #fff;
+  height: 48px;
   margin-bottom: 14px;
+  color: #fff;
   font-size: 14px;
   line-height: 1.17em;
   overflow: hidden;
@@ -517,29 +518,29 @@ address {
 
 .pets-in-zoo-wrap {
   flex-basis: 1300px;
-  margin: 100px 150px;
+  margin: 100px 100px;
   overflow: hidden;
 }
 
 .pets-in-zoo-carousel {
   display: flex;
+  justify-content: space-between;
   align-items: center;
+  gap: 20px;
   margin-bottom: 30px;
 }
 
 .carousel-items {
   display: flex;
+  justify-content: space-between;
+  flex-basis: 1200px;
+  gap: 30px;
   cursor: pointer;
 }
 
 .carousel-item {
-  margin-right: 30px;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
   overflow: hidden;
-}
-
-.carousel-item:last-child {
-  margin-right: 0;
 }
 
 .carousel-item .animal-card-description {
@@ -555,7 +556,6 @@ address {
 .previous-btn {
   width: 30px;
   height: 30px;
-  margin-right: 20px;
   border: none;
   background: url("data:image/svg+xml,%3Csvg width='30' height='30' viewBox='0 0 30 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6.6663 16.1706L20.0167 29.5207C20.3255 29.8298 20.7376 30 21.1772 30C21.6167 30 22.0289 29.8298 22.3376 29.5207L23.3208 28.5378C23.9605 27.8973 23.9605 26.8564 23.3208 26.2169L12.1102 15.0062L23.3332 3.78314C23.642 3.47412 23.8125 3.06217 23.8125 2.6229C23.8125 2.18315 23.642 1.7712 23.3332 1.46194L22.3501 0.479263C22.0411 0.17024 21.6291 0 21.1896 0C20.7501 0 20.3379 0.17024 20.0291 0.479263L6.6663 13.8416C6.35679 14.1516 6.18679 14.5655 6.18777 15.0055C6.18679 15.4472 6.35679 15.8608 6.6663 16.1706Z' fill='%23828282'/%3E%3C/svg%3E%0A") center no-repeat;
 }
@@ -563,7 +563,6 @@ address {
 .next-btn {
   width: 30px;
   height: 30px;
-  margin-left: 20px;
   border: none;
   background: url("data:image/svg+xml,%3Csvg width='30' height='30' viewBox='0 0 30 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M23.3337 13.8294L9.98332 0.479264C9.67454 0.170243 9.26235 0 8.82284 0C8.38334 0 7.97114 0.170243 7.66237 0.479264L6.6792 1.46218C6.03945 2.10267 6.03945 3.14363 6.6792 3.78314L17.8898 14.9938L6.66676 26.2169C6.35799 26.5259 6.1875 26.9378 6.1875 27.3771C6.1875 27.8168 6.35799 28.2288 6.66676 28.5381L7.64993 29.5207C7.95895 29.8298 8.3709 30 8.81041 30C9.24991 30 9.66211 29.8298 9.97088 29.5207L23.3337 16.1584C23.6432 15.8484 23.8132 15.4345 23.8122 14.9945C23.8132 14.5528 23.6432 14.1392 23.3337 13.8294Z' fill='%23828282'/%3E%3C/svg%3E%0A") center no-repeat;
 }
@@ -1113,6 +1112,19 @@ legend {
   .inspire-list {
     gap: 20px;
   }
+
+  .pets-in-zoo-carousel .animal-card {
+    width: 210px;
+    height: 301px;
+  }
+
+  .carousel-items {
+    gap: 20px;
+  }
+
+  .carousel-item .animal-card-description {
+    padding: 94% 9px 34px 7px;
+  }
 }
 
 @media screen and (max-width: 1199px) {
@@ -1150,6 +1162,19 @@ legend {
 
   .what-inspires-wrap {
     margin: 100px 20px;
+  }
+
+  .pets-in-zoo-wrap {
+    margin: 100px 20px;
+  }
+
+
+}
+
+@media screen and (max-width: 1020px) {
+  .previous-btn,
+  .next-btn {
+    display: none;
   }
 }
 
@@ -1224,6 +1249,10 @@ legend {
     margin-bottom: 15px;
   }
 
+  h3 {
+    font-size: 36px;
+  }
+
   .watch-online-wrap {
     padding: 92px 0 50px;
   }
@@ -1283,16 +1312,20 @@ legend {
     margin-left: 143px;
   }
 
-  .slider {
+  .watch-online .slider {
     margin-top: 0;
   }
 
-  .slider-value {
+  .watch-online .slider-value {
     margin-bottom: -7px;
   }
 
   .social-links {
     display: none;
+  }
+
+  .how-it-works-wrap {
+    margin: 50px 20px;
   }
 
   .what-inspires-wrap {
@@ -1315,5 +1348,9 @@ legend {
 
   .inspire-card {
     flex-basis: 100%;
+  }
+
+  .pets-in-zoo-wrap {
+    margin: 100px 10px 50px;
   }
 }
