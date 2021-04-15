@@ -454,7 +454,7 @@ address {
 
 .how-it-works-wrap {
   flex-basis: 790px;
-  margin: 100px auto;
+  margin: 100px 20px;
   text-align: center;
   overflow: hidden;
 }
@@ -491,7 +491,7 @@ address {
 
 .what-inspires-wrap {
   flex-basis: 1200px;
-  margin: 100px auto;
+  margin: 100px 150px;
 }
 
 .inspire-list {
@@ -510,10 +510,14 @@ address {
   height: 80px;
 }
 
+.pets-in-zoo {
+  display: flex;
+  justify-content: center;
+}
+
 .pets-in-zoo-wrap {
-  max-width: 1300px;
-  margin: 0 auto;
-  padding: 100px 0;
+  flex-basis: 1300px;
+  margin: 100px 150px;
   overflow: hidden;
 }
 
@@ -1068,7 +1072,6 @@ legend {
   }
 
   .watch-online-wrap {
-    margin: 0 150px;
     padding: 128px 0 72px;
   }
 
@@ -1107,10 +1110,6 @@ legend {
     margin-bottom: 14px;
   }
 
-  .what-inspires-wrap {
-    margin: 100px 150px;
-  }
-
   .inspire-list {
     gap: 20px;
   }
@@ -1142,7 +1141,7 @@ legend {
   }
 
   .how-it-works-wrap {
-    margin: 100px 20px 68px;
+    margin-bottom: 68px;
   }
 
   .how-it-works-text {
@@ -1311,10 +1310,6 @@ legend {
   }
 
   .how-it-works-wrap {
-    margin: 50px 10px;
-  }
-
-  .what-inspires-wrap {
     margin: 50px 10px;
   }
 
