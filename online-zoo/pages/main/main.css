@@ -447,10 +447,14 @@ address {
   background-image: url("../../assets/icon-vk.svg");
 }
 
+.how-it-works {
+  display: flex;
+  justify-content: center;
+}
+
 .how-it-works-wrap {
-  max-width: 790px;
-  margin: 0 auto;
-  padding: 100px 0;
+  flex-basis: 790px;
+  margin: 100px auto;
   text-align: center;
   overflow: hidden;
 }
@@ -1096,6 +1100,10 @@ legend {
   .social-links {
     margin-top: 320px;
   }
+
+  .how-it-works-text {
+    margin-bottom: 14px;
+  }
 }
 
 @media screen and (max-width: 1199px) {
@@ -1121,6 +1129,14 @@ legend {
 
   .social-links {
     margin-top: 369px;
+  }
+
+  .how-it-works-wrap {
+    margin: 100px 20px 68px;
+  }
+
+  .how-it-works-text {
+    margin-bottom: 30px;
   }
 }
 
@@ -1260,5 +1276,9 @@ legend {
 
   .watch-online-wrap {
     margin: 0 10px;
+  }
+
+  .how-it-works-wrap {
+    margin: 50px 10px;
   }
 }
