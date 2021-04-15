@@ -484,22 +484,24 @@ address {
 }
 
 .what-inspires {
+  display: flex;
+  justify-content: center;
   background-color: #f2f2f2;
 }
 
 .what-inspires-wrap {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 100px 0;
+  flex-basis: 1200px;
+  margin: 100px auto;
 }
 
 .inspire-list {
   display: flex;
   justify-content: space-between;
+  gap: 30px;
 }
 
 .inspire-card {
-  width: 380px;
+  flex-basis: 380px;
   text-align: center;
 }
 
@@ -1104,6 +1106,14 @@ legend {
   .how-it-works-text {
     margin-bottom: 14px;
   }
+
+  .what-inspires-wrap {
+    margin: 100px 150px;
+  }
+
+  .inspire-list {
+    gap: 20px;
+  }
 }
 
 @media screen and (max-width: 1199px) {
@@ -1137,6 +1147,10 @@ legend {
 
   .how-it-works-text {
     margin-bottom: 30px;
+  }
+
+  .what-inspires-wrap {
+    margin: 100px 20px;
   }
 }
 
@@ -1187,6 +1201,20 @@ legend {
 
   .animals-gallery-wrap .slider-wrap {
     margin-left: 281px;
+  }
+
+  .inspire-list {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+  }
+
+  .inspire-card {
+    flex-basis: 287px;
+  }
+
+  .inspire-card-text {
+    margin-bottom: 0;
   }
 }
 
@@ -1267,6 +1295,10 @@ legend {
   .social-links {
     display: none;
   }
+
+  .what-inspires-wrap {
+    margin: 50px 10px;
+  }
 }
 
 @media screen and (max-width: 320px) {
@@ -1280,5 +1312,13 @@ legend {
 
   .how-it-works-wrap {
     margin: 50px 10px;
+  }
+
+  .what-inspires-wrap {
+    margin: 50px 10px;
+  }
+
+  .inspire-card {
+    flex-basis: 100%;
   }
 }
