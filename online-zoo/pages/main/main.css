@@ -83,6 +83,13 @@ p {
   text-align: left;
 }
 
+footer {
+  display: flex;
+  justify-content: center;
+  background-color: #333;
+  overflow: hidden;
+}
+
 address {
   font-style: normal;
 }
@@ -743,6 +750,7 @@ address {
 }
 
 .map-marker {
+  --marker-size: 93.4px;
   position: absolute;
   filter: drop-shadow(2px 4px 15px rgba(6, 12, 70, 0.15));
 }
@@ -764,8 +772,8 @@ address {
 
 .marker-icon {
   position: relative;
-  width: 93.4px;
-  height: 93.4px;
+  width: var(--marker-size);
+  height: var(--marker-size);
   background: url("../../assets/icon-map-marker.svg") center no-repeat;
   background-size: contain;
 }
@@ -785,23 +793,23 @@ address {
 }
 
 .eagle-marker {
-  top: calc(33% - 93.4px);
-  left: calc(13.2% - 93.4px / 2);
+  top: calc(33% - var(--marker-size));
+  left: calc(13.2% - var(--marker-size) / 2);
 }
 
 .alligator-marker {
-  top: calc(39% - 93.4px);
-  left: calc(23% - 93.4px / 2);
+  top: calc(39% - var(--marker-size));
+  left: calc(23% - var(--marker-size) / 2);
 }
 
 .gorilla-marker {
-  top: calc(57% - 93.4px);
-  left: calc(50.5% - 93.4px / 2);
+  top: calc(57% - var(--marker-size));
+  left: calc(50.5% - var(--marker-size) / 2);
 }
 
 .panda-marker {
-  top: calc(36% - 93.4px);
-  left: calc(77.3% - 93.4px / 2);
+  top: calc(36% - var(--marker-size));
+  left: calc(77.3% - var(--marker-size) / 2);
 }
 
 .tooltip {
@@ -853,32 +861,31 @@ address {
   margin-bottom: 5px;
 }
 
-footer {
-  background-color: #333;
-  overflow: hidden;
-}
-
 .footer-wrap {
   display: grid;
-  column-gap: 20px;
-  grid-template-columns: repeat(2, minmax(440px, 1fr));
+  grid-template-areas: "logo nav for-volunteers-btn"
+  "contact-form contacts ."
+  "copyright copyright copyright";
+  grid-template-columns: 50% 1fr 1fr;
   grid-template-rows: repeat(3, auto);
-  max-width: 1620px;
-  margin: 0 auto;
-  padding: 100px 0 72px;
+  column-gap: 20px;
+  flex-basis: 1620px;
+  margin: 100px 150px 72px;
+}
+
+.footer-logo {
+  grid-area: logo;
 }
 
 .nav-footer {
   display: flex;
-  justify-content: space-between;
   align-items: center;
 }
 
 .nav-links-footer {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  width: 380px;
+  flex-basis: 380px;
   margin: 0 auto 0 0;
 }
 
@@ -891,18 +898,21 @@ footer {
 }
 
 .for-volunteers-btn {
+  grid-area: for-volunteers-btn;
   width: 275px;
   margin: 0 0 0 auto;
   font-weight: 500;
 }
 
 .contact-form {
-  padding: 60px 0;
+  grid-area: contact-form;
+  max-width: 383px;
+  margin: 60px 0;
   color: #bdbdbd;
 }
 
 .contact-input {
-  width: 383px;
+  width: 100%;
   margin-bottom: 20px;
   padding-bottom: 10px;
   color: #e0e0e0;
@@ -919,7 +929,7 @@ footer {
 }
 
 fieldset {
-  width: 383px;
+  width: 100%;
   height: 120px;
   margin-bottom: 25px;
   border: 1px solid #bdbdbd;
@@ -992,7 +1002,7 @@ legend {
   align-items: center;
   color: #fefefe;
   width: 108px;
-  margin-left: 259px;
+  margin: 0 15px 0 auto;
   font-size: 14px;
   font-weight: 500;
   line-height: 1.15em;
@@ -1011,7 +1021,9 @@ legend {
 }
 
 .contacts {
-  padding: 56px 0;
+  grid-area: contacts;
+  margin: 56px 0 40px;
+  height: auto;
 }
 
 .address-title {
@@ -1048,12 +1060,13 @@ legend {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  grid-area: social-links;
   width: 125px;
   height: 20px;
 }
 
 .copyright {
-  grid-column: span 2;
+  grid-area: copyright;
   padding-top: 28px;
   color: #bdbdbd;
   border-top: 0.5px solid #fefefe;
@@ -1156,6 +1169,27 @@ legend {
   .map-container {
     height: 436px;
   }
+
+  .footer-wrap {
+    grid-template-areas: "logo nav"
+        "contact-form contacts"
+        "contact-form for-volunteers-btn"
+        "copyright copyright";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto 1fr auto;
+  }
+
+  .nav-footer {
+    align-items: flex-end;
+  }
+
+  .contact-form {
+    margin: 72px 0 65px;
+  }
+
+  .for-volunteers-btn {
+    margin: 0;
+  }
 }
 
 @media screen and (max-width: 1199px) {
@@ -1214,6 +1248,10 @@ legend {
   .map-title {
     margin-bottom: 50px;
   }
+
+  .footer-wrap {
+    margin: 100px 20px 50px;
+  }
 }
 
 @media screen and (max-width: 1020px) {
@@ -1232,6 +1270,37 @@ legend {
     flex-basis: 20px;
     flex-shrink: 1;
     transform: rotate(90deg);
+  }
+
+  .footer-wrap {
+    grid-template-areas: "logo for-volunteers-btn"
+        "nav nav"
+        "contact-form contact-form"
+        "contacts contacts"
+        "copyright copyright";
+    grid-template-columns: 1fr auto;
+    grid-template-rows: repeat(5, auto) ;
+  }
+
+  .nav-footer {
+    margin: 18px 0 21px;
+  }
+
+  .nav-links-footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links-footer li {
+    margin-bottom: 5px;
+  }
+
+  .contact-form {
+    margin: 0 0 77px;
+  }
+
+  .contacts {
+    margin: 0 0 71px;
   }
 }
 
@@ -1403,33 +1472,8 @@ legend {
     margin-bottom: 40px;
   }
 
-  .map-container {
-    height: 230px;
-  }
-
-  .eagle-marker {
-    top: calc(33% - 47px);
-    left: calc(13.2% - 47px / 2);
-  }
-
-  .alligator-marker {
-    top: calc(39% - 47px);
-    left: calc(23% - 47px / 2);
-  }
-
-  .gorilla-marker {
-    top: calc(57% - 47px);
-    left: calc(50.5% - 47px / 2);
-  }
-
-  .panda-marker {
-    top: calc(36% - 47px);
-    left: calc(77.3% - 47px / 2);
-  }
-
-  .marker-icon {
-    width: 47px;
-    height: 47px;
+  .map-marker {
+    --marker-size: 47px;
   }
 
   .marker-photo-wrap {
@@ -1460,6 +1504,29 @@ legend {
     flex-shrink: 0;
     width: 40px;
     height: 40px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .map-container {
+    height: 230px;
+  }
+
+  .footer-wrap {
+    grid-template-areas: "logo" "nav" "contact-form" "contacts" "for-volunteers-btn" "copyright";
+    grid-template-columns: 1fr;
+  }
+
+  .contact-form {
+    margin: 0 0 54px;
+  }
+
+  .contacts {
+    margin: 0 0 46px;
+  }
+
+  .for-volunteers-btn {
+    margin: 0 auto 80px;
   }
 }
 
@@ -1503,5 +1570,9 @@ legend {
 
   .map-container {
     height: 146px;
+  }
+
+  .footer-wrap {
+    margin: 50px 10px 27px;
   }
 }
