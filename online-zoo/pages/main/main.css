@@ -24,6 +24,10 @@ ul {
   list-style: none;
 }
 
+a {
+  text-decoration: none;
+}
+
 a:visited {
   color: none;
 }
@@ -77,10 +81,6 @@ p {
   font-size: 14px;
   line-height: 1.15em;
   text-align: left;
-}
-
-a {
-  text-decoration: none;
 }
 
 address {
@@ -374,7 +374,6 @@ address {
   background: #333;
 }
 
-
 .btn-big {
   display: block;
   width: 245px;
@@ -388,6 +387,11 @@ address {
   font-weight: 800;
   line-height: 1.17em;
   text-transform: uppercase;
+  transition: all 0.5s ease;
+}
+
+.btn-big:hover {
+  filter: hue-rotate(180deg);
 }
 
 .watch-btn {
