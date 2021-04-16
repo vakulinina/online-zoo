@@ -717,13 +717,14 @@ address {
 }
 
 .map {
+  display: flex;
+  justify-content: center;
   background-color: #f2f2f2;
 }
 
 .map-wrap {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 100px 0;
+  flex-basis: 1200px;
+  margin: 100px 150px;
 }
 
 .map-title {
@@ -735,8 +736,6 @@ address {
   width: 100%;
   height: 498px;
   margin-bottom: 35px;
-  background: url("../../assets/map.svg")center no-repeat;
-  background-size: contain;
 }
 
 .map-marker {
@@ -752,6 +751,7 @@ address {
 .map-marker-active .marker-icon,
 .map-marker:hover .marker-icon {
   background: url("../../assets/icon-map-marker-active.svg") center no-repeat;
+  background-size: contain;
 }
 
 .map-marker:hover .tooltip {
@@ -763,6 +763,7 @@ address {
   width: 93.4px;
   height: 93.4px;
   background: url("../../assets/icon-map-marker.svg") center no-repeat;
+  background-size: contain;
 }
 
 .marker-photo-wrap {
@@ -780,23 +781,23 @@ address {
 }
 
 .eagle-marker {
-  top: 14%;
-  left: 9%;
+  top: calc(33% - 93.4px);
+  left: calc(13.2% - 93.4px / 2);
 }
 
 .alligator-marker {
-  top: 20.5%;
-  left: 19.2%;
+  top: calc(39% - 93.4px);
+  left: calc(23% - 93.4px / 2);
 }
 
 .gorilla-marker {
-  top: 38%;
-  left: 46.5%;
+  top: calc(57% - 93.4px);
+  left: calc(50.5% - 93.4px / 2);
 }
 
 .panda-marker {
-  top: 18%;
-  left: 73%;
+  top: calc(36% - 93.4px);
+  left: calc(77.3% - 93.4px / 2);
 }
 
 .tooltip {
@@ -808,8 +809,8 @@ address {
   top: 80%;
   left: 50%;
   width: 436px;
-  height: 149px;
-  padding: 0 44px;
+  max-height: 149px;
+  padding: 40px 44px 44px;
   background: #fefefe;
   border-radius: 8px;
   box-shadow: 2px 4px 15px rgba(6, 12, 70, 0.15);
@@ -817,6 +818,10 @@ address {
 
 .tooltip-left {
   transform: translate(-100%, 0);
+}
+
+.tooltip-center {
+  transform: translate(-50%, 0);
 }
 
 .tooltip-image-wrap {
@@ -1143,6 +1148,10 @@ legend {
   .testimonial-cards {
     column-gap: 20px;
   }
+
+  .map-container {
+    height: 436px;
+  }
 }
 
 @media screen and (max-width: 1199px) {
@@ -1193,6 +1202,14 @@ legend {
   .testimonials-wrap {
     margin: 100px 20px;
   }
+
+  .map-wrap {
+    margin: 100px 20px 80px;
+  }
+
+  .map-title {
+    margin-bottom: 50px;
+  }
 }
 
 @media screen and (max-width: 1020px) {
@@ -1211,6 +1228,12 @@ legend {
     flex-basis: 20px;
     flex-shrink: 1;
     transform: rotate(90deg);
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .map-container {
+    height: 290px;
   }
 }
 
@@ -1375,6 +1398,65 @@ legend {
   .pay-feed-steps {
     margin-bottom: 40px;
   }
+
+  .map-container {
+    height: 230px;
+  }
+
+  .eagle-marker {
+    top: calc(33% - 47px);
+    left: calc(13.2% - 47px / 2);
+  }
+
+  .alligator-marker {
+    top: calc(39% - 47px);
+    left: calc(23% - 47px / 2);
+  }
+
+  .gorilla-marker {
+    top: calc(57% - 47px);
+    left: calc(50.5% - 47px / 2);
+  }
+
+  .panda-marker {
+    top: calc(36% - 47px);
+    left: calc(77.3% - 47px / 2);
+  }
+
+  .marker-icon {
+    width: 47px;
+    height: 47px;
+  }
+
+  .marker-photo-wrap {
+    position: absolute;
+    top: 5.85px;
+    left: 12px;
+    width: 22px;
+    height: 22px;
+  }
+
+  .tooltip {
+    align-items: flex-start;
+    width: 238px;
+    max-height: 113px;
+    padding: 16px 15px;
+  }
+
+  .tooltip-title {
+    margin-bottom: 5px;
+    font-size: 14px;
+  }
+
+  .tooltip-text {
+    font-size: 11px;
+  }
+
+  .tooltip-image-wrap {
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+  }
 }
 
 @media screen and (max-width: 320px) {
@@ -1413,5 +1495,9 @@ legend {
 
   .testimonial-card-photo {
     margin-bottom: 47px;
+  }
+
+  .map-container {
+    height: 146px;
   }
 }
