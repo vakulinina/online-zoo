@@ -1508,29 +1508,6 @@ legend {
 }
 
 @media screen and (max-width: 500px) {
-  .map-container {
-    height: 230px;
-  }
-
-  .footer-wrap {
-    grid-template-areas: "logo" "nav" "contact-form" "contacts" "for-volunteers-btn" "copyright";
-    grid-template-columns: 1fr;
-  }
-
-  .contact-form {
-    margin: 0 0 54px;
-  }
-
-  .contacts {
-    margin: 0 0 46px;
-  }
-
-  .for-volunteers-btn {
-    margin: 0 auto 80px;
-  }
-}
-
-@media screen and (max-width: 320px) {
   .header-wrap {
     margin: 0 10px;
   }
@@ -1573,6 +1550,20 @@ legend {
   }
 
   .footer-wrap {
+    grid-template-areas: "logo" "nav" "contact-form" "contacts" "for-volunteers-btn" "copyright";
+    grid-template-columns: 1fr;
     margin: 50px 10px 27px;
+  }
+
+  .contact-form {
+    margin: 0 0 54px;
+  }
+
+  .contacts {
+    margin: 0 0 46px;
+  }
+
+  .for-volunteers-btn {
+    margin: 0 auto 80px;
   }
 }
