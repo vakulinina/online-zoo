@@ -1,3 +1,26 @@
+main {
+  display: flex;
+  justify-content: center;
+}
+
+.choose-favorite-wrap {
+  flex-basis: 1200px;
+  margin: 60px 200px 100px;
+}
+
+.choose-favorite-wrap .slider-wrap {
+  margin-bottom: 80px;
+}
+
+.choose-favorite-title {
+  margin-bottom: 20px;
+}
+
+.choose-favorite-text {
+  max-width: 790px;
+  margin: 0 auto 54px;
+}
+
 .nav-animals {
   display: flex;
   align-items: center;

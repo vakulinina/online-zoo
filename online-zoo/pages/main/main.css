@@ -1079,25 +1079,6 @@ legend {
   line-height: 1.17em;
 }
 
-.choose-favorite-wrap {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 60px 0 100px;
-}
-
-.choose-favorite-wrap .slider-wrap {
-  margin-bottom: 80px;
-}
-
-.choose-favorite-title {
-  margin-bottom: 20px;
-}
-
-.choose-favorite-text {
-  max-width: 790px;
-  margin: 0 auto 54px;
-}
-
 @media screen and (max-width: 1620px) {
   h2 {
     margin-left: 0;
