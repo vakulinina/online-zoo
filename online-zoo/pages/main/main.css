@@ -381,6 +381,13 @@ address {
   background: #333;
 }
 
+.btn-link {
+  display: block;
+  margin: 0 auto;
+  width: 245px;
+  height: 55px;
+}
+
 .btn-big {
   display: block;
   width: 245px;
