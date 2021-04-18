@@ -593,8 +593,17 @@ address {
 }
 
 .pets-in-zoo-carousel .animal-card {
+.next-btn:hover {
+  transform: scale(1.2);
+}
+
   width: 278px;
   height: 399px;
+  transition: all 0.3s ease;
+}
+
+.next-btn:hover {
+  transform: scale(1.2);
 }
 
 .pets-in-zoo .slider::-webkit-slider-thumb {
