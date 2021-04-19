@@ -67,7 +67,7 @@ h4 {
 }
 
 h5 {
-  margin: 15px 0;
+  margin: 11px 0;
   color: #333;
   font-size: 20px;
   font-weight: 900;
@@ -614,7 +614,7 @@ address {
   width: calc(100%/8);
 }
 
-.choose-favorite-btn {
+.pets-in-zoo .btn-link {
   margin: 30px auto 0;
 }
 
@@ -687,7 +687,7 @@ address {
 }
 
 .testimonials-title {
-  margin-bottom: 50px;
+  margin-bottom: 60px;
 }
 
 .testimonials-carousel {
@@ -1104,7 +1104,7 @@ legend {
     padding: 128px 0 72px;
   }
 
-  .watch-online .watch-btn {
+  .watch-online .btn-link {
     margin-left: 0;
   }
 
@@ -1135,8 +1135,16 @@ legend {
     margin-top: 320px;
   }
 
+  .how-it-works-wrap {
+    flex-basis: 746px;
+  }
+
   .how-it-works-text {
     margin-bottom: 14px;
+  }
+
+  .what-inspires-wrap {
+    margin: 100px 150px 90px;
   }
 
   .inspire-list {
@@ -1154,6 +1162,10 @@ legend {
 
   .carousel-item .animal-card-description {
     padding: 94% 9px 34px 7px;
+  }
+
+  .pay-feed-text {
+    margin-bottom: 50px;
   }
 
   .pay-feed-steps {
@@ -1197,6 +1209,10 @@ legend {
     font-size: 64px;
   }
 
+  h3 {
+    margin-bottom: 35px;
+  }
+
   .header-wrap {
     margin: 0 20px;
   }
@@ -1224,15 +1240,23 @@ legend {
   }
 
   .what-inspires-wrap {
-    margin: 100px 20px;
+    margin: 100px 20px 111px;
   }
 
   .pets-in-zoo-wrap {
     margin: 100px 20px;
   }
 
+  .pets-in-zoo .btn-link {
+    margin: 35px auto 0;
+  }
+
   .pay-feed-wrap {
-    margin: 50px 20px;
+    margin: 100px 50px;
+  }
+
+  .pay-feed-wrap h3 {
+    margin-bottom: 20px;
   }
 
   .testimonials-wrap {
@@ -1348,6 +1372,9 @@ legend {
   .menu-btn {
     display: inline-block;
   }
+  .animals-gallery-wrap {
+    left: 33px;
+  }
 
   .animals-gallery {
     padding-left: 71px;
@@ -1371,6 +1398,15 @@ legend {
     margin-bottom: 0;
   }
 
+  .testimonials-title {
+    margin-bottom: 45px;
+  }
+
+  .testimonials-carousel .previous-btn,
+  .testimonials-carousel .next-btn {
+    display: none;
+  }
+
   .testimonial-card {
     min-width: 100%;
   }
@@ -1388,7 +1424,7 @@ legend {
   }
 
   .watch-online-wrap {
-    padding: 92px 0 50px;
+    padding: 92px 0 336px;
   }
 
   .watch-online .watch-btn {
@@ -1462,12 +1498,64 @@ legend {
     margin: 50px 20px;
   }
 
+  .how-it-works h3 {
+    margin-bottom: 20px;
+  }
+
+  .how-it-works-image {
+    margin-bottom: 17px;
+  }
+
+  .how-it-works .slider-wrap {
+    margin-bottom: 19px;
+  }
+
   .what-inspires-wrap {
-    margin: 50px 10px;
+    margin: 50px 10px 53px;
+  }
+
+  .inspire-list {
+    gap: 34px;
+  }
+
+  .pets-in-zoo .btn-link {
+    margin: 20px auto 0;
+  }
+
+  .pay-feed-wrap {
+    margin: 50px 20px;
+  }
+
+  .pay-feed h3 {
+    margin-bottom: 26px;
+  }
+
+  .pay-feed-text {
+    display: none;
   }
 
   .pay-feed-steps {
     margin-bottom: 40px;
+  }
+
+  .testimonials-carousel {
+    margin-bottom: 32px;
+  }
+
+  .testimonials .feedback-btn {
+    margin-top: 19px;
+  }
+
+  .map-wrap {
+    margin: 50px 10px 60px;
+  }
+
+  .map-title {
+    margin-bottom: 30px;
+  }
+
+  .map-container {
+    margin-bottom: 30px;
   }
 
   .map-marker {
@@ -1553,8 +1641,16 @@ legend {
     margin: 50px 10px 27px;
   }
 
+  .nav-footer {
+    margin: 44px 0 21px;
+  }
+
   .contact-form {
     margin: 0 0 54px;
+  }
+
+  .send-btn {
+    margin-right: 1px;
   }
 
   .contacts {
