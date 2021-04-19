@@ -1424,7 +1424,7 @@ legend {
   }
 
   .watch-online-wrap {
-    padding: 92px 0 336px;
+    padding: 92px 0 402px;
   }
 
   .watch-online .watch-btn {
@@ -1600,6 +1600,7 @@ legend {
 
   .watch-online-wrap {
     margin: 0 10px;
+    padding: 92px 0 400px;
   }
 
   .how-it-works-wrap {
@@ -1659,5 +1660,11 @@ legend {
 
   .for-volunteers-btn {
     margin: 0 auto 80px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .watch-online-wrap {
+    padding: 92px 0 336px;
   }
 }
