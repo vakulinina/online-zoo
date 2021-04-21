@@ -19,7 +19,7 @@
   flex-direction: column;
   align-items: center;
   align-self: flex-start;
-  top: 100px;
+  top: 0;
   bottom: 100vh;
   max-width: 209px;
   margin-top: 60px;
@@ -324,6 +324,10 @@
 }
 
 @media screen and (max-width: 700px) {
+  .nav-animals {
+    top: 100px;
+  }
+
   .broadcast {
     margin-bottom: 65px;
   }
