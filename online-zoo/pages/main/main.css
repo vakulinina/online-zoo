@@ -1305,7 +1305,7 @@ legend {
   }
 
   .nav-footer {
-    margin: 18px 0 21px;
+    margin: 18px 0 17px;
   }
 
   .nav-links-footer {
@@ -1398,6 +1398,10 @@ legend {
     margin-bottom: 0;
   }
 
+  .pay-feed-steps {
+    margin-bottom: 47px;
+  }
+
   .testimonials-title {
     margin-bottom: 45px;
   }
@@ -1409,6 +1413,14 @@ legend {
 
   .testimonial-card {
     min-width: 100%;
+  }
+
+  .footer-wrap {
+    margin: 95px 20px 50px;
+  }
+
+  .footer-wrap h4 {
+      margin-bottom: 30px;
   }
 }
 

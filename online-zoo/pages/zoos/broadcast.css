@@ -1,21 +1,9 @@
-.broadcast h2 {
-  color: #333333;
-  font-size: 48px;
-  font-weight: 900;
-  line-height: 1.17em;
-  margin: 0 0 40px 0;
-}
-
 .broadcast h4 {
   margin-bottom: 6px;
   color: #333333;
   font-size: 20px;
   font-weight: 900;
   line-height: 1.15em;
-}
-
-.broadcast p {
-  margin-bottom: 16px;
 }
 
 .content {
@@ -245,8 +233,9 @@
 .broadcast-info p {
   font-style: normal;
   font-weight: normal;
+  margin-bottom: 16px;
   font-size: 14px;
-  line-height: 16px;
+  line-height: 1.16em;
   color: #4F4F4F;
 }
 
@@ -334,12 +323,31 @@
   }
 }
 
+@media screen and (max-width: 700px) {
+  .broadcast {
+    margin-bottom: 65px;
+  }
+
+  .broadcast-heading {
+    margin-bottom: 36px;
+    margin-left: 10px;
+  }
+
+  .broadcast__main-stream-wrapper {
+    margin-bottom: 15px;
+  }
+
+  .broadcast-info p {
+    margin-bottom: 13px;
+  }
+}
+
 @media screen and (max-width: 500px) {
   .broadcast {
     margin-bottom: 40px;
   }
 
-  .broadcast h2 {
+  .broadcast-heading {
     font-size: 24px;
     margin-bottom: 20px;
   }
