@@ -1,6 +1,12 @@
+:root {
+  --main-block-background-dark: #fbfbfb;
+}
+
 main {
   display: flex;
   justify-content: center;
+  background-color: var(--main-block-background-dark);
+  transition: all 1s ease;
 }
 
 .choose-favorite-wrap {
@@ -74,12 +80,10 @@ main {
   border-width: 3px;
   border-style: solid;
   border-color: transparent;
-  background-image: -webkit-linear-gradient(white, white), -webkit-linear-gradient(to right, #07EEE0 0%, #DF496D 100%);
-  background-image: -moz-linear-gradient(white, white), -moz-linear-gradient(to right, #07EEE0 0%, #DF496D 100%);
-  background-image: -o-linear-gradient(white, white), -o-linear-gradient(to right, #07EEE0 0%, #DF496D 100%);
-  background-image: linear-gradient(white, white), linear-gradient(to right, #07EEE0 0%, #DF496D 100%);
+  background-image: linear-gradient(var(--main-block-background-dark), var(--main-block-background-dark)), linear-gradient(to right, #07EEE0 0%, #DF496D 100%);
   background-origin: border-box;
   background-clip: content-box, border-box;
+  transition: all 1s ease;
 }
 
 .nav-animals-item-selected .nav-animals-link {

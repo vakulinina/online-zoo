@@ -5,9 +5,18 @@
   font-family: 'Roboto', sans-serif;
 }
 
+:root {
+  --header-background-color: #fff;
+  --main-block-background-light: #fff;
+  --main-block-background-dark: #f2f2f2;
+  --title-color: #333;
+  --paragraph-color: #4f4f4f;
+}
+
 body {
   min-width: 320px;
   overflow-x: hidden;
+  background-color: var(--main-block-background-light);
 }
 
 header {
@@ -17,8 +26,9 @@ header {
   z-index: 2;
   width: 100%;
   height: 94px;
-  background-color: #fff;
+  background-color: var(--header-background-color);
   box-shadow: 0px 4px 8px rgba(44, 101, 77, 0.08);
+  transition: all 1s;
 }
 
 ul {
@@ -53,6 +63,7 @@ h2 {
 
 h3 {
   margin-bottom: 30px;
+  color: var(--title-color);
   font-size: 48px;
   font-weight: 900;
   line-height: 1.17em;
@@ -69,7 +80,7 @@ h4 {
 
 h5 {
   margin: 11px 0;
-  color: #333;
+  color: var(--title-color);
   font-size: 20px;
   font-weight: 900;
   line-height: 1.15em;
@@ -78,7 +89,7 @@ h5 {
 
 p {
   margin-bottom: 30px;
-  color: #4f4f4f;
+  color: var(--paragraph-color);
   font-size: 14px;
   line-height: 1.15em;
   text-align: left;
@@ -131,18 +142,18 @@ address {
 }
 
 .nav-link {
-  color: #333;
+  color: var(--title-color);
   font-size: 16px;
 }
 
 .nav-link:hover {
-  border-bottom: 1px solid #333;
+  border-bottom: 1px solid var(--title-color);
 }
 
 .nav-link-active {
   cursor: default;
   font-weight: 900;
-  border-bottom: 1px solid #333;
+  border-bottom: 1px solid var(--title-color);
 }
 
 .theme-toggle:hover {
@@ -188,6 +199,10 @@ address {
   width: 40px;
   height: 40px;
   background: url("data:image/svg+xml,%3Csvg width='40' height='21' viewBox='0 0 40 21' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cline y1='1.5' x2='40' y2='1.5' stroke='%23333333' stroke-width='3'/%3E%3Cline y1='10.5' x2='40' y2='10.5' stroke='%23333333' stroke-width='3'/%3E%3Cline x1='7' y1='19.5' x2='40' y2='19.5' stroke='%23333333' stroke-width='3'/%3E%3C/svg%3E%0A") center no-repeat;
+}
+
+.menu-btn-fill-dark {
+  background-image: url("data:image/svg+xml,%3Csvg width='40' height='21' viewBox='0 0 40 21' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cline y1='1.5' x2='40' y2='1.5' stroke='%23FEFEFE' stroke-width='3'/%3E%3Cline y1='10.5' x2='40' y2='10.5' stroke='%23FEFEFE' stroke-width='3'/%3E%3Cline x1='7' y1='19.5' x2='40' y2='19.5' stroke='%23FEFEFE' stroke-width='3'/%3E%3C/svg%3E%0A");
 }
 
 .watch-online {
@@ -335,7 +350,7 @@ address {
 }
 
 .slider-value.dark {
-  color: #333;
+  color: var(--title-color);
 }
 
 .slider-value-total {
@@ -375,11 +390,11 @@ address {
 }
 
 .slider.dark::-webkit-slider-thumb {
-  background: #333;
+  background: var(--title-color);
 }
 
 .slider.dark::-moz-range-thumb {
-  background: #333;
+  background: var(--title-color);
 }
 
 .btn-link {
@@ -504,7 +519,7 @@ address {
 .what-inspires {
   display: flex;
   justify-content: center;
-  background-color: #f2f2f2;
+  background-color: var(--main-block-background-dark);
 }
 
 .what-inspires-wrap {
@@ -622,7 +637,7 @@ address {
 .pay-feed {
   display: flex;
   justify-content: center;
-  background-color: #f2f2f2;
+  background-color: var(--main-block-background-dark);
   overflow: hidden;
 }
 
@@ -670,7 +685,7 @@ address {
 .step-text {
   width: 55%;
   margin-bottom: 0;
-  color: #4f4f4f;
+  color: var(--paragraph-color);
   font-size: 20px;
   font-weight: bold;
   line-height: 1.15em;
@@ -713,8 +728,16 @@ address {
   height: 310px;
   padding: 47px 7%;
   border-radius: 5px;
-  background: #fefefe;
+  background-color: #fefefe;
   box-shadow: 2px 4px 15px rgba(6, 12, 70, 0.1);
+}
+
+.testimonial-card-dark {
+  background-color: #3c3c3c;
+}
+
+.testimonial-card-dark .testimonial-card-photo {
+  border-color: transparent;
 }
 
 .testimonial-card-photo {
@@ -737,7 +760,7 @@ address {
   font-size: 20px;
   font-weight: 900;
   line-height: 1.15em;
-  color: #333;
+  color: var(--title-color);
 }
 
 .feedback-btn {
@@ -747,7 +770,7 @@ address {
 .map {
   display: flex;
   justify-content: center;
-  background-color: #f2f2f2;
+  background-color: var(--main-block-background-dark);
 }
 
 .map-wrap {
@@ -764,7 +787,7 @@ address {
   width: 100%;
   height: 498px;
   margin-bottom: 35px;
-  background: url("../../assets/map.svg") center no-repeat;
+  background: url("../../assets/map-dark.svg") center no-repeat;
 }
 
 .map-marker {
@@ -841,9 +864,13 @@ address {
   width: 436px;
   max-height: 149px;
   padding: 40px 44px 44px;
-  background: #fefefe;
+  background-color: #fefefe;
   border-radius: 8px;
   box-shadow: 2px 4px 15px rgba(6, 12, 70, 0.15);
+}
+
+.tooltip-dark {
+  background-color: #333;
 }
 
 .tooltip-left {
@@ -869,7 +896,7 @@ address {
 
 .tooltip-title {
   margin-bottom: 7px;
-  color: #333;
+  color: var(--title-color);
   font-size: 18px;
   font-weight: 900;
   line-height: 1.17em;
@@ -1368,6 +1395,7 @@ legend {
   .menu-btn-input:checked ~ .nav-links {
     visibility: visible;
     opacity: 1;
+    background-color: var(--header-background-color);
   }
 
   .nav-link {
