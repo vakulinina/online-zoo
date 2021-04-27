@@ -18,7 +18,9 @@
       <a class="logo" href="../main/index.html">
         <img src="../../assets/logo-dark.svg" alt="Online Zoo">
       </a>
-      <nav>
+      <nav class="nav-wrap">
+        <label class="menu-btn" for="menu-btn-input"><span class="menu-btn-fill"></span></label>
+        <input class="menu-btn-input visually-hidden" id="menu-btn-input" type="checkbox">
         <ul class="nav-links">
           <li><a class="nav-link" href="../main/index.html">About</a></li>
           <li><a class="nav-link nav-link-active" href="../zoos/panda.html">Zoos</a></li>
@@ -28,7 +30,7 @@
         </ul>
       </nav>
       <label class="theme-toggle">
-        <input class="toggle-input" type="checkbox">
+        <input class="toggle-input visually-hidden" type="checkbox">
         <span class="toggle-fill"></span>
       </label>
     </div>
@@ -36,25 +38,25 @@
   <main class="content">
     <aside class="nav-animals">
       <button class="up-btn"></button>
-      <ul class="nav-animals__list">
-        <li class="nav-animals__animal">
-          <a class="nav-animals__link" title="Panda" href="panda.html">
-            <img class="nav-animals__animal-img" src="../../assets/panda.png" alt="Panda">
+      <ul class="nav-animals-list">
+        <li class="nav-animals-item">
+          <a class="nav-animals-link" title="Panda" href="panda.html">
+            <img class="nav-animals-item-img" src="../../assets/panda.png" alt="Panda">
           </a>
         </li>
-        <li class="nav-animals__animal">
-          <a class="nav-animals__link" title="Eagle" href="eagle.html">
-            <img class="nav-animals__animal-img" src="../../assets/eagle.png" alt="Eagle">
+        <li class="nav-animals-item">
+          <a class="nav-animals-link" title="Eagle" href="eagle.html">
+            <img class="nav-animals-item-img" src="../../assets/eagle.png" alt="Eagle">
           </a>
         </li>
-        <li class="nav-animals__animal">
-          <a class="nav-animals__link" title="Alligator" href="alligator.html">
-            <img class="nav-animals__animal-img" src="../../assets/alligator.png" alt="Alligator">
+        <li class="nav-animals-item ">
+          <a class="nav-animals-link" title="Alligator" href="alligator.html">
+            <img class="nav-animals-item-img" src="../../assets/alligator.png" alt="Alligator">
           </a>
         </li>
-        <li class="nav-animals__animal nav-animals__animal--selected">
-          <a class="nav-animals__link nav-animals__link-active" title="Gorilla" href="gorilla.html">
-            <img class="nav-animals__animal-img" src="../../assets/gorilla.png" alt="Gorilla">
+        <li class="nav-animals-item nav-animals-item--selected">
+          <a class="nav-animals-link nav-animals-link-active" title="Gorilla" href="gorilla.html">
+            <img class="nav-animals-item-img" src="../../assets/gorilla.png" alt="Gorilla">
           </a>
         </li>
       </ul>
@@ -64,34 +66,30 @@
       <h2 class="broadcast-heading">GRACE Gorilla Forest Corridor Cam</h2>
       <div class="broadcast__content-wrapper">
         <div class="broadcast__stream-wrapper">
-          <iframe class="broadcast__main-stream" src="https://www.youtube.com/embed/rgXWDk7rh4w"
-            title="YouTube video player" frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen></iframe>
+          <div class="broadcast__main-stream-wrapper">
+            <iframe class="broadcast__main-stream" src="https://www.youtube.com/embed/rgXWDk7rh4w"
+              title="YouTube video player" frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen></iframe>
+          </div>
           <ul class="broadcast__stream-list">
-            <li>
-              <div class="preview-wrapper">
-                <iframe class="broadcast__stream-preview" src="https://www.youtube.com/embed/rgXWDk7rh4w"
-                  title="YouTube video player" frameborder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowfullscreen></iframe>
-              </div>
+            <li class="broadcast-preview-wrapper">
+              <iframe class="broadcast__stream-preview" src="https://www.youtube.com/embed/rgXWDk7rh4w"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
             </li>
-            <li>
-              <div class="preview-wrapper">
-                <iframe class="broadcast__stream-preview" src="https://www.youtube.com/embed/rgXWDk7rh4w"
-                  title="YouTube video player" frameborder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowfullscreen></iframe>
-              </div>
+            <li class="broadcast-preview-wrapper">
+              <iframe class="broadcast__stream-preview" src="https://www.youtube.com/embed/rgXWDk7rh4w"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
             </li>
-            <li>
-              <div class="preview-wrapper">
-                <iframe class="broadcast__stream-preview" src="https://www.youtube.com/embed/rgXWDk7rh4w"
-                  title="YouTube video player" frameborder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowfullscreen></iframe>
-              </div>
+            <li class="broadcast-preview-wrapper">
+              <iframe class="broadcast__stream-preview" src="https://www.youtube.com/embed/rgXWDk7rh4w"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
             </li>
           </ul>
           <div class="broadcast-stream-controls">
@@ -102,14 +100,13 @@
         </div>
         <div class="broadcast-info">
           <h4>Population:</h4>
-          <p>Over 100,000 western lowland gorillas</p>
+          <p>Roughly 1.25 million</p>
           <h4>Habitat:</h4>
-          <p>Gorillas primarily inhabit tropical forest habitats.Tropical forests are characterized as having little
-            variance in temperature (around 23°C) and length of daylight (around 12 hours).</p>
+          <p>Alligators can be found in slow-moving rivers, ponds, lakes and swamps.</p>
           <h4>Diet:</h4>
-          <p>Gorillas stick to a mainly vegetarian diet, feeding on stems, bamboo shoots and fruits. Western lowland
-            gorillas, however, also have an appetite for termites and ants, and break open termite nests to eat the
-            larvae.</p>
+          <p>Their diets include prey species that are abundant and easily accessible. Juvenile alligators eat primarily
+            insects, amphibians, small fish, and other invertebrates. Adult alligators eat rough fish, snakes, turtles,
+            small mammals, and birds.</p>
           <button class="btn-big feed-btn">Feed</button>
         </div>
       </div>
@@ -127,8 +124,8 @@
           <li><a class="nav-link-footer" href="https://www.figma.com/file/HKt5Nlx0jghQtJp6jW9q8F/zooApp"
               target="_blank">Design</a></li>
         </ul>
-        <button class="btn-big for-volunteers-btn">Donate for volunteers</button>
       </nav>
+      <button class="btn-big for-volunteers-btn">Donate for volunteers</button>
       <form class="contact-form" id="contact-form" action="">
         <h4>Contact us</h4>
         <input class="contact-input" type="text" id="" placeholder="Name" required><br>

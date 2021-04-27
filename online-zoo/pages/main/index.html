@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../../pages/main/main.css" type="text/css">
@@ -17,7 +17,9 @@
       <a class="logo" href="../main/index.html">
         <img src="../../assets/logo-dark.svg" alt="Online Zoo">
       </a>
-      <nav>
+      <nav class="nav-wrap">
+        <label class="menu-btn" for="menu-btn-input"><span class="menu-btn-fill"></span></label>
+        <input class="menu-btn-input visually-hidden" id="menu-btn-input" type="checkbox">
         <ul class="nav-links">
           <li><a class="nav-link nav-link-active" href="../main/index.html">About</a></li>
           <li><a class="nav-link" href="../zoos/panda.html">Zoos</a></li>
@@ -27,7 +29,7 @@
         </ul>
       </nav>
       <label class="theme-toggle">
-        <input class="toggle-input" type="checkbox">
+        <input class="toggle-input visually-hidden" type="checkbox">
         <span class="toggle-fill"></span>
       </label>
     </div>
@@ -35,7 +37,7 @@
   <main>
     <section class="watch-online">
       <div class="watch-online-wrap">
-        <h2>Watch your favorite animal online</h2>
+        <h2>Watch your favorite animal online</h2>
         <div class="animals-gallery-wrap">
           <ul class="animals-gallery">
             <li class="gallery-item">
@@ -81,7 +83,8 @@
     <section class="how-it-works">
       <div class="how-it-works-wrap">
         <h3 class="how-it-works-title">How it works?</h3>
-        <p>As a voice for wildlife, we are devastated by the impact of the 2020 Australian bushfires on precious species
+        <p class="how-it-works-text">As a voice for wildlife, we are devastated by the impact of the 2020 Australian
+          bushfires on precious species
           and their habitat, and we are determined to assist in all aspects, including providing veterinary support and
           raising much-needed emergency funds. Zoo Online saves wildlife and inspires everyone to make conservation a
           priority in their lives. Animals have the right to a pain-free and happy life. They have equal claim to the
@@ -101,18 +104,21 @@
           <li class="inspire-card">
             <img class="inspire-card-icon" src="../../assets/icon-inspire.svg" alt="">
             <h5>What inspires us?</h5>
-            <p>As a voice for wildlife, we are devastated by the impact of the 2020 Australian bushfires on precious
+            <p class="inspire-card-text">As a voice for wildlife, we are devastated by the impact of the 2020 Australian
+              bushfires on precious
               species and their habitat, and we are determined to assist in all aspects.</p>
           </li>
           <li class="inspire-card">
             <img class="inspire-card-icon" src="../../assets/icon-mission.svg" alt="">
             <h5>Our mission</h5>
-            <p>Zoo Online saves wildlife and inspires everyone to make conservation a priority in their lives.</p>
+            <p class="inspire-card-text">Zoo Online saves wildlife and inspires everyone to make conservation a priority
+              in their lives.</p>
           </li>
           <li class="inspire-card">
             <img class="inspire-card-icon" src="../../assets/icon-believe.svg" alt="">
             <h5>What we believe in?</h5>
-            <p>Animals have the right to a pain-free and happy life. They have equal claim to the resources of this
+            <p class="inspire-card-text">Animals have the right to a pain-free and happy life. They have equal claim to
+              the resources of this
               planet, and deserve a life of dignity and compassion.</p>
           </li>
         </ul>
@@ -193,11 +199,15 @@
               <p class="step-text">You pay with a VISA card</p>
             </div>
           </li>
+          <li class="pay-feed-arrow">
+          </li>
           <li>
             <div class="pay-feed-step">
               <img src="../../assets/icon-zoo.svg" alt="">
               <p class="step-text">Payment goes to the Zoo</p>
             </div>
+          </li>
+          <li class="pay-feed-arrow">
           </li>
           <li>
             <div class="pay-feed-step">
@@ -283,7 +293,7 @@
                 <img class="marker-photo" src="../../assets/gorilla.png" alt="Gorilla">
               </div>
             </div>
-            <div class="tooltip tooltip-left">
+            <div class="tooltip tooltip-center">
               <div class="tooltip-image-wrap">
                 <img class="tooltip-image" src="../../assets/gorilla.png" alt="Gorilla">
               </div>
@@ -329,8 +339,8 @@
           <li><a class="nav-link-footer" href="https://www.figma.com/file/HKt5Nlx0jghQtJp6jW9q8F/zooApp"
               target="_blank">Design</a></li>
         </ul>
-        <button class="btn-big for-volunteers-btn">Donate for volunteers</button>
       </nav>
+      <button class="btn-big for-volunteers-btn">Donate for volunteers</button>
       <form class="contact-form" id="contact-form" action="">
         <h4>Contact us</h4>
         <input class="contact-input" type="text" id="" placeholder="Name" required><br>
