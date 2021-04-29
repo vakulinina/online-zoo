@@ -228,32 +228,71 @@ address {
 }
 
 .animals-gallery-wrap .slider-wrap {
-  margin-left: 323px;
+  margin-left: 348px;
+  margin-top: 23px;
 }
 
 .animals-gallery {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  padding-left: 135px;
+  position: relative;
+  width: 1225px;
+  height: 352px;
   background: url("../../assets/gallery-line-background.svg") center no-repeat;
   background-size: contain;
 }
 
 .gallery-item {
-  cursor: pointer;
-  margin-right: 46px;
+  position: absolute;
+  display: block;
+  left: 28.5%;
+  top: 0;
+  width: 245px;
+  height: 352px;
   filter: drop-shadow(5px 4px 50px rgba(152, 157, 198, 0.25));
+  transition: transform 1s ease-out, opacity 0.6s ease;
 }
 
-.gallery-item:last-child {
-  margin-right: 0;
+.gallery-item-hidden-start {
+  opacity: 0;
+  transform: translateX(-453px) scale(0.74);
+}
+
+.gallery-item-prev {
+  transform: translateX(-243px) scale(0.74);
+  cursor: pointer;
+}
+
+.gallery-item-active {
+  cursor: default;
+}
+
+.gallery-item-next {
+  transform: translateX(243px) scale(0.74);
+  cursor: pointer;
+}
+
+.gallery-item-next2 {
+  transform: translateX(453px) scale(0.74);
+}
+
+.gallery-item-next3 {
+  transform: translateX(664px) scale(0.74);
+}
+
+.gallery-item-hidden-end {
+  opacity: 0;
+  transform: translateX(874px) scale(0.74);
+}
+
+.gallery-item-empty {
+  cursor: default;
+  background: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 13 13' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='6.5' cy='6.5' r='2.5' fill='%23FEFEFE'/%3E%3Ccircle cx='6.5' cy='6.5' r='6' stroke='%23FEFEFE'/%3E%3C/svg%3E%0A") center no-repeat;
+  pointer-events: none;
 }
 
 .animal-card {
   position: relative;
-  width: 140px;
-  height: 203px;
+  width: 100%;
+  height: 100%;
   border-radius: 5px;
   overflow: hidden;
 }
@@ -267,10 +306,17 @@ address {
 
 .animal-card-description {
   position: absolute;
-  bottom: 0;
+  visibility: hidden;
+  bottom: -100%;
   height: 100%;
   padding: 94% 28px 34px 23px;
   background: linear-gradient(0deg, #000 -56.45%, rgba(0, 0, 0, 0) 65.03%);
+  transition: all 1s ease;
+}
+
+.gallery-item-active .animal-card-description {
+  bottom: 0;
+  visibility: visible;
 }
 
 .animal-card-text {
@@ -294,6 +340,7 @@ address {
   font-weight: 500;
   background: none;
   text-transform: uppercase;
+  cursor: pointer;
 }
 
 .watch-btn-small::before {
@@ -326,12 +373,6 @@ address {
   margin-right: 2px;
   background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='12' cy='12' r='11.5' stroke='white'/%3E%3Cpath d='M14.1982 15.6602C14.1982 15.1621 14.04 14.752 13.7236 14.4297C13.4072 14.1016 12.8799 13.8086 12.1416 13.5508C11.4033 13.2871 10.8291 13.0439 10.4189 12.8213C9.05371 12.0889 8.37109 11.0049 8.37109 9.56934C8.37109 8.59668 8.66699 7.79687 9.25879 7.16992C9.85059 6.54297 10.6533 6.1709 11.667 6.05371V4.1377H13.0732V6.07129C14.0928 6.21777 14.8809 6.65137 15.4375 7.37207C15.9941 8.08691 16.2725 9.01855 16.2725 10.167H14.1455C14.1455 9.42871 13.9785 8.84863 13.6445 8.42676C13.3164 7.99902 12.8682 7.78516 12.2998 7.78516C11.7373 7.78516 11.2979 7.9375 10.9814 8.24219C10.665 8.54688 10.5068 8.9834 10.5068 9.55176C10.5068 10.0615 10.6621 10.4717 10.9727 10.7822C11.2891 11.0869 11.8223 11.377 12.5723 11.6523C13.3223 11.9277 13.9111 12.1826 14.3389 12.417C14.7666 12.6514 15.127 12.9209 15.4199 13.2256C15.7129 13.5244 15.9385 13.8701 16.0967 14.2627C16.2549 14.6553 16.334 15.1152 16.334 15.6426C16.334 16.6328 16.0293 17.4355 15.4199 18.0508C14.8164 18.666 13.9727 19.0293 12.8887 19.1406V20.8545H11.4912V19.1494C10.3311 19.0205 9.4375 18.6045 8.81055 17.9014C8.18945 17.1982 7.87891 16.2666 7.87891 15.1064H10.0146C10.0146 15.8447 10.1992 16.416 10.5684 16.8203C10.9434 17.2246 11.4707 17.4268 12.1504 17.4268C12.8184 17.4268 13.3252 17.2656 13.6709 16.9434C14.0225 16.6211 14.1982 16.1934 14.1982 15.6602Z' fill='white'/%3E%3C/svg%3E%0A");
   background-size: contain;
-}
-
-.animal-card-active {
-  width: 245px;
-  height: 352px;
-  margin-bottom: 24px;
 }
 
 .slider-wrap {
@@ -1141,22 +1182,8 @@ legend {
     left: 36%;
   }
 
-  .gallery-item {
-    margin-right: 30px;
-  }
-
-  .animal-card {
-    width: 180px;
-    height: 261px;
-  }
-
-  .animal-card-active {
-    width: 245px;
-    height: 352px;
-  }
-
   .animals-gallery-wrap .slider-wrap {
-    margin-left: 345px;
+    margin-left: 350px;
   }
 
   .social-links {
@@ -1177,11 +1204,6 @@ legend {
 
   .inspire-list {
     gap: 20px;
-  }
-
-  .pets-in-zoo-carousel .animal-card {
-    width: 210px;
-    height: 301px;
   }
 
   .carousel-items {
@@ -1491,20 +1513,20 @@ legend {
     padding-left: 21px;
   }
 
-  .gallery-item {
+  /* .gallery-item {
     margin-right: 9px;
-  }
+  } */
 
-  .animal-card {
+  /* .animal-card {
     width: 113px;
     height: 164px;
-  }
+  } */
 
-  .animal-card-active {
+  /* .animal-card-active {
     width: 140px;
     height: 201px;
     margin-bottom: 15px;
-  }
+  } */
 
   .animal-card-description {
     padding: 75px 4px 71px 8px;
