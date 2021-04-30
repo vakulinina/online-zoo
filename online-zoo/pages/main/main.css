@@ -28,7 +28,7 @@ header {
   height: 94px;
   background-color: var(--header-background-color);
   box-shadow: 0px 4px 8px rgba(44, 101, 77, 0.08);
-  transition: all 1s;
+  transition: all 0.5s;
 }
 
 ul {
@@ -248,7 +248,7 @@ address {
   width: 245px;
   height: 352px;
   filter: drop-shadow(5px 4px 50px rgba(152, 157, 198, 0.25));
-  transition: transform 1s ease-out, opacity 0.6s ease;
+  transition: transform 0.5s ease-out, opacity 0.3s ease;
 }
 
 .gallery-item-hidden-start {
@@ -270,11 +270,11 @@ address {
   cursor: pointer;
 }
 
-.gallery-item-next2 {
+.gallery-item-next-second {
   transform: translateX(453px) scale(0.74);
 }
 
-.gallery-item-next3 {
+.gallery-item-next-third {
   transform: translateX(664px) scale(0.74);
 }
 
@@ -311,7 +311,7 @@ address {
   height: 100%;
   padding: 94% 28px 34px 23px;
   background: linear-gradient(0deg, #000 -56.45%, rgba(0, 0, 0, 0) 65.03%);
-  transition: all 1s ease;
+  transition: all 0.5s ease;
 }
 
 .gallery-item-active .animal-card-description {

@@ -15,7 +15,7 @@
   position: relative;
   background: var(--main-block-background-dark);
   padding-bottom: 20px;
-  transition: all 1s ease;
+  transition: all 0.5s ease;
 }
 
 .nav-animals {

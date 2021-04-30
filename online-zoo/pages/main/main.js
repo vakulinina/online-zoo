@@ -1,6 +1,8 @@
 // Theme switch
+const themeToggle = document.querySelector('.toggle-input');
+const currentTheme = localStorage.getItem('theme');
 
-document.querySelector('.theme-toggle').addEventListener('change', ({ target }) => {
+const toggleTheme = (theme) => {
   const headerLogo = document.querySelector('.header-logo');
   const menuButton = document.querySelector('.menu-btn-fill');
   const tooltips = document.querySelectorAll('.tooltip');
@@ -14,13 +16,15 @@ document.querySelector('.theme-toggle').addEventListener('change', ({ target }) 
     '--paragraph-color': '#f2f2f2',
   };
 
-  if (target.checked) {
+  if (theme === 'dark') {
+    localStorage.setItem('theme', 'dark');
     for (let prop in commonStyleProps) {
       document.documentElement.style.setProperty(prop, commonStyleProps[prop]);
     };
     headerLogo.setAttribute('src', '../../assets/logo-light.svg');
     map.style.backgroundImage = 'url("../../assets/map-light.svg")';
   } else {
+    localStorage.setItem('theme', 'light')
     for (let prop in commonStyleProps) {
       document.documentElement.style.removeProperty(prop);
     };
@@ -31,6 +35,22 @@ document.querySelector('.theme-toggle').addEventListener('change', ({ target }) 
   menuButton.classList.toggle('menu-btn-fill-dark');
   testimonialCards.forEach(card => card.classList.toggle('testimonial-card-dark'));
   tooltips.forEach(tooltip => tooltip.classList.toggle('tooltip-dark'));
+}
+
+if (currentTheme === 'dark') {
+  themeToggle.checked = true;
+  toggleTheme('dark');
+} else {
+  themeToggle.checked = false;
+  toggleTheme('light');
+}
+
+themeToggle.addEventListener('change', ({ target }) => {
+  if (target.checked) {
+    toggleTheme('dark');
+  } else {
+    toggleTheme('light');
+  }
 })
 
 //Watch online carousel
@@ -99,13 +119,13 @@ const slideNext = () => {
   document.querySelector('.gallery-item-next').classList.add('gallery-item-active');
   document.querySelector('.gallery-item-next').classList.remove('gallery-item-next');
 
-  document.querySelector('.gallery-item-next2').classList.add('gallery-item-next');
-  document.querySelector('.gallery-item-next2').classList.remove('gallery-item-next2');
+  document.querySelector('.gallery-item-next-second').classList.add('gallery-item-next');
+  document.querySelector('.gallery-item-next-second').classList.remove('gallery-item-next-second');
 
-  document.querySelector('.gallery-item-next3').classList.add('gallery-item-next2');
-  document.querySelector('.gallery-item-next3').classList.remove('gallery-item-next3');
+  document.querySelector('.gallery-item-next-third').classList.add('gallery-item-next-second');
+  document.querySelector('.gallery-item-next-third').classList.remove('gallery-item-next-third');
 
-  document.querySelector('.gallery-item-hidden-end').classList.add('gallery-item-next3');
+  document.querySelector('.gallery-item-hidden-end').classList.add('gallery-item-next-third');
   document.querySelector('.gallery-item-hidden-end').classList.remove('gallery-item-hidden-end');
 
   const nextAnimal = animals[animalIndex + 5];
@@ -132,14 +152,14 @@ const slideNext = () => {
 const slideBack = () => {
   document.querySelector('.gallery-item-hidden-end').remove();
 
-  document.querySelector('.gallery-item-next3').classList.add('gallery-item-hidden-end');
-  document.querySelector('.gallery-item-next3').classList.remove('gallery-item-next3');
+  document.querySelector('.gallery-item-next-third').classList.add('gallery-item-hidden-end');
+  document.querySelector('.gallery-item-next-third').classList.remove('gallery-item-next-third');
 
 
-  document.querySelector('.gallery-item-next2').classList.add('gallery-item-next3');
-  document.querySelector('.gallery-item-next2').classList.remove('gallery-item-next2');
+  document.querySelector('.gallery-item-next-second').classList.add('gallery-item-next-third');
+  document.querySelector('.gallery-item-next-second').classList.remove('gallery-item-next-second');
 
-  document.querySelector('.gallery-item-next').classList.add('gallery-item-next2');
+  document.querySelector('.gallery-item-next').classList.add('gallery-item-next-second');
   document.querySelector('.gallery-item-next').classList.remove('gallery-item-next');
 
 
