@@ -599,19 +599,33 @@ address {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 20px;
   margin-bottom: 30px;
 }
 
+.pets-in-zoo-carousel .previous-btn {
+  margin-right: 20px;
+}
+
+.pets-in-zoo-carousel .next-btn {
+  margin-left: 5px;
+}
+
+.carousel-items-displayed {
+  overflow: hidden;
+  max-width: 100%;
+}
+
 .carousel-items {
+  position: relative;
+  left: 0;
   display: flex;
   justify-content: space-between;
-  flex-basis: 1200px;
-  gap: 30px;
   cursor: pointer;
+  transition: all 1s ease;
 }
 
 .carousel-item {
+  width: 308px;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
   overflow: hidden;
 }
@@ -628,8 +642,11 @@ address {
   text-overflow: ellipsis;
 }
 
-.carousel-item:hover .animal-card-description {
+.carousel-item:hover .animal-card-description,
+.carousel-item-active .animal-card-description {
   transform: translate(0, -100%);
+  visibility: visible;
+  cursor: default;
 }
 
 .previous-btn {
@@ -659,8 +676,8 @@ address {
 }
 
 .pets-in-zoo-carousel .animal-card {
-  width: 278px;
-  height: 399px;
+  width: 100%;
+  height: 100%;
 }
 
 .pets-in-zoo .slider::-webkit-slider-thumb {
@@ -1164,7 +1181,7 @@ legend {
   line-height: 1.17em;
 }
 
-@media screen and (max-width: 1620px) {
+@media screen and (max-width: 1680px) {
   h2 {
     margin-left: 0;
   }
@@ -1206,9 +1223,14 @@ legend {
     gap: 20px;
   }
 
-  .carousel-items {
-    gap: 20px;
+  /* .carousel-item {
+    width: 230px;
   }
+
+  .pets-in-zoo-carousel .animal-card {
+    width: 210px;
+    height: 301px;
+  } */
 
   .carousel-item .animal-card-description {
     padding: 94% 9px 34px 7px;
@@ -1512,21 +1534,6 @@ legend {
   .animals-gallery {
     padding-left: 21px;
   }
-
-  /* .gallery-item {
-    margin-right: 9px;
-  } */
-
-  /* .animal-card {
-    width: 113px;
-    height: 164px;
-  } */
-
-  /* .animal-card-active {
-    width: 140px;
-    height: 201px;
-    margin-bottom: 15px;
-  } */
 
   .animal-card-description {
     padding: 75px 4px 71px 8px;

@@ -170,59 +170,103 @@
       <div class="pets-in-zoo-wrap">
         <h3>Pets in Zoo</h3>
         <div class="pets-in-zoo-carousel">
-          <button class="previous-btn"></button>
-          <ul class="carousel-items">
-            <li class="carousel-item" class="carousel-item">
-              <article class="animal-card">
-                <img src="../../assets/panda.png" alt="Panda">
-                <div class="animal-card-description">
-                  <p class="animal-card-text">Panda’s name is Bei Bei. He is 2 years old. Bei Bei is from China. He
-                    loves
-                    bamboos.</p>
-                  <button class="watch-btn-small">Watch online</button>
-                  <button class="donate-btn-small">Donate</button>
-                </div>
-              </article>
-            </li>
-            <li class="carousel-item">
-              <article class="animal-card">
-                <img src="../../assets/eagle.png" alt="Eagle">
-                <div class="animal-card-description">
-                  <p class="animal-card-text">Eagle’s name is Vincent. He is 3 years old. Vincent is from America. He
-                    loves life.</p>
-                  <button class="watch-btn-small">Watch online</button>
-                  <button class="donate-btn-small">Donate</button>
-                </div>
-              </article>
-            </li>
-            <li class="carousel-item">
-              <article class="animal-card">
-                <img src="../../assets/gorilla.png" alt="">
-                <div class="animal-card-description">
-                  <p class="animal-card-text">Gorilla’s name is Alexander. He is 10 years old. Alexander is from
-                    Florida. He loves to parties.</p>
-                  <button class="watch-btn-small">Watch online</button>
-                  <button class="donate-btn-small">Donate</button>
-                </div>
-              </article>
-            </li>
-            <li class="carousel-item">
-              <article class="animal-card">
-                <img src="../../assets/alligator.png" alt="Alligator">
-                <div class="animal-card-description">
-                  <p class="animal-card-text">Alligator's name is Alfred. He is 11 years old. Alfred is from China. He
-                    loves to bathe and chill.</p>
-                  <button class="watch-btn-small">Watch online</button>
-                  <button class="donate-btn-small">Donate</button>
-                </div>
-              </article>
-            </li>
-          </ul>
-          <button class="next-btn"></button>
+          <button class="previous-btn" id="pets-carousel-prev"></button>
+          <div class="carousel-items-displayed">
+            <ul class="carousel-items">
+              <li class="carousel-item carousel-item-active">
+                <article class="animal-card">
+                  <img src="../../assets/panda.png" alt="Panda">
+                  <div class="animal-card-description">
+                    <p class="animal-card-text">Panda’s name is Bei Bei. He is 2 years old. Bei Bei is from China. He
+                      loves
+                      bamboos.</p>
+                    <a class="watch-btn-small" href="../zoos/panda.html">Watch online</a>
+                    <button class="donate-btn-small">Donate</button>
+                  </div>
+                </article>
+              </li>
+              <li class="carousel-item">
+                <article class="animal-card">
+                  <img src="../../assets/eagle.png" alt="Eagle">
+                  <div class="animal-card-description">
+                    <p class="animal-card-text">Eagle’s name is Vincent. He is 3 years old. Vincent is from America. He
+                      loves life.</p>
+                    <a class="watch-btn-small" href="../zoos/eagle.html">Watch online</a>
+                    <button class="donate-btn-small">Donate</button>
+                  </div>
+                </article>
+              </li>
+              <li class="carousel-item">
+                <article class="animal-card">
+                  <img src="../../assets/gorilla.png" alt="">
+                  <div class="animal-card-description">
+                    <p class="animal-card-text">Gorilla’s name is Alexander. He is 10 years old. Alexander is from
+                      Florida. He loves to parties.</p>
+                    <a class="watch-btn-small" href="../zoos/gorilla.html">Watch online</a>
+                    <button class="donate-btn-small">Donate</button>
+                  </div>
+                </article>
+              </li>
+              <li class="carousel-item">
+                <article class="animal-card">
+                  <img src="../../assets/alligator.png" alt="Alligator">
+                  <div class="animal-card-description">
+                    <p class="animal-card-text">Alligator's name is Alfred. He is 11 years old. Alfred is from China. He
+                      loves to bathe and chill.</p>
+                    <a class="watch-btn-small" href="../zoos/alligator.html">Watch online</a>
+                    <button class="donate-btn-small">Donate</button>
+                  </div>
+                </article>
+              </li>
+              <li class="carousel-item">
+                <article class="animal-card">
+                  <img src="../../assets/fox.png" alt="Fox">
+                  <div class="animal-card-description">
+                    <p class="animal-card-text">Fox’s name is Henry. He is 3 years old. Henry is from Russia.</p>
+                    <a class="watch-btn-small" href="../zoos/fox.html">Watch online</a>
+                    <button class="donate-btn-small">Donate</button>
+                  </div>
+                </article>
+              </li>
+              <li class="carousel-item">
+                <article class="animal-card">
+                  <img src="../../assets/elephant.png" alt="Elephant">
+                  <div class="animal-card-description">
+                    <p class="animal-card-text">Elephant's name is Jesus. He is 15 years old. Jesus is from Africa.</p>
+                    <a class="watch-btn-small" href="../zoos/elephant.html">Watch online</a>
+                    <button class="donate-btn-small">Donate</button>
+                  </div>
+                </article>
+              </li>
+              <li class="carousel-item">
+                <article class="animal-card">
+                  <img src="../../assets/sloth.png" alt="Sloth">
+                  <div class="animal-card-description">
+                    <p class="animal-card-text">Sloth's name is Sid. He is 4 years old. Sid is from Central America.</p>
+                    <a class="watch-btn-small" href="../zoos/sloth.html">Watch online</a>
+                    <button class="donate-btn-small">Donate</button>
+                  </div>
+                </article>
+              </li>
+              <li class="carousel-item">
+                <article class="animal-card">
+                  <img src="../../assets/leopard.png" alt="Leopard">
+                  <div class="animal-card-description">
+                    <p class="animal-card-text">Leopard's name is Juan. He is 6 years old. Juan is from Central America.
+                    </p>
+                    <a class="watch-btn-small" href="../zoos/leopard.html">Watch online</a>
+                    <button class="donate-btn-small">Donate</button>
+                  </div>
+                </article>
+              </li>
+            </ul>
+          </div>
+          <button class="next-btn" id="pets-carousel-next"></button>
         </div>
-        <div class="slider-wrap">
-          <span class="slider-value dark">01/<span class="slider-value-total">08</span></span>
-          <input class="slider dark" id="slider" type="range" min="1" max="8" value="1">
+        <div class="slider-wrap" id="pets-carousel-range">
+          <output class="slider-value dark" id="pets-carousel-range-output">01/<span
+              class="slider-value-total">08</span></output>
+          <input class="slider dark" id="pets-carousel-range-input" type="range" min="1" max="8" value="1">
         </div>
         <a class="btn-link" href="../map/map.html"><button class="btn-big choose-favorite-btn">Choose your
             favorite</button></a>

@@ -1,3 +1,5 @@
+'use strict'
+
 // Theme switch
 
 const themeToggle = document.querySelector('.toggle-input');
@@ -209,20 +211,131 @@ animalsGallery.addEventListener('click', ({ target }) => {
   updateSliderValue();
 })
 
-let previousSliderValue = rangeSlider.value;
+let previousRangeValue = rangeSlider.value;
 
 rangeSlider.addEventListener('input', () => {
   const currentSliderValue = rangeSlider.value;
-  if (currentSliderValue > previousSliderValue) {
-    for (let i = previousSliderValue; i < currentSliderValue; i++) {
+  if (currentSliderValue > previousRangeValue) {
+    for (let i = previousRangeValue; i < currentSliderValue; i++) {
       slideNext();
     }
   }
-  if (currentSliderValue < previousSliderValue) {
-    for (let i = previousSliderValue; i > currentSliderValue; i--) {
+  if (currentSliderValue < previousRangeValue) {
+    for (let i = previousRangeValue; i > currentSliderValue; i--) {
       slideBack();
     }
   }
   updateSliderValue();
-  previousSliderValue = currentSliderValue;
+  previousRangeValue = currentSliderValue;
 })
+
+// Pets-in-zoo carousel
+
+const nextButton = document.querySelector('#pets-carousel-next');
+const previousButton = document.querySelector('#pets-carousel-prev');
+const carouselLine = document.querySelector('.carousel-items');
+const carouselItems = document.querySelectorAll('.carousel-item');
+const carouselRangeOutput = document.querySelector('#pets-carousel-range-output');
+const carouselRangeInput = document.querySelector('#pets-carousel-range-input');
+const displayedItems = 4;
+let activeItemIndex = 0;
+let stepWidth;
+let sliderWidth;
+let lastDisplayedImageIndex;
+
+const updateRangeValue = () => {
+  carouselRangeOutput.innerHTML = `0${carouselRangeInput.value}/<span class="slider-value-total">0${carouselItems.length}</span>`
+}
+
+const rollCarousel = () => {
+  if (activeItemIndex < displayedItems) {
+    carouselLine.style.left = 0;
+  } else {
+    carouselLine.style.left = `-${(activeItemIndex + 1 - displayedItems) * stepWidth}px`;
+  }
+}
+
+const calculateCarousel = () => {
+  sliderWidth = document.querySelector('.carousel-items-displayed').offsetWidth;
+  stepWidth = sliderWidth / displayedItems;
+  carouselLine.style.width = `${stepWidth * carouselItems.length}px`;
+
+  carouselItems.forEach(item => {
+    item.style.width = `${stepWidth * 0.92}px`;
+    item.style.height = `${stepWidth * 1.32}px`;
+  })
+
+  rollCarousel();
+}
+
+const handleNextInput = () => {
+  const currentActiveItem = [...carouselItems].find(item => item.classList.contains('carousel-item-active'));
+  if (activeItemIndex >= carouselItems.length) {
+    activeItemIndex = 0;
+    rollCarousel();
+    currentActiveItem.classList.remove('carousel-item-active');
+    carouselItems[activeItemIndex].classList.add('carousel-item-active');
+  } else if (activeItemIndex >= displayedItems) {
+    rollCarousel();
+    lastDisplayedImageIndex = activeItemIndex;
+    currentActiveItem.classList.remove('carousel-item-active');
+    carouselItems[activeItemIndex].classList.add('carousel-item-active');
+  } else {
+    currentActiveItem.classList.remove('carousel-item-active');
+    carouselItems[activeItemIndex].classList.add('carousel-item-active');
+  }
+}
+
+const handlePreviousInput = () => {
+  const currentActiveItem = [...carouselItems].find(item => item.classList.contains('carousel-item-active'));
+  if (activeItemIndex < 0) {
+    activeItemIndex = carouselItems.length - 1;
+    rollCarousel();
+    currentActiveItem.classList.remove('carousel-item-active');
+    carouselItems[activeItemIndex].classList.add('carousel-item-active');
+  } else if (activeItemIndex <= lastDisplayedImageIndex - displayedItems || activeItemIndex < carouselItems.length - displayedItems) {
+    rollCarousel();
+    currentActiveItem.classList.remove('carousel-item-active');
+    carouselItems[activeItemIndex].classList.add('carousel-item-active');
+  } else {
+    currentActiveItem.classList.remove('carousel-item-active');
+    carouselItems[activeItemIndex].classList.add('carousel-item-active');
+  }
+}
+
+nextButton.addEventListener('click', () => {
+  activeItemIndex++;
+  handleNextInput();
+  carouselRangeInput.value = activeItemIndex + 1;
+  updateRangeValue();
+})
+
+previousButton.addEventListener('click', () => {
+  activeItemIndex--;
+  handlePreviousInput();
+  carouselRangeInput.value = activeItemIndex + 1;
+  updateRangeValue();
+})
+
+let previousCarouselRangeValue = carouselRangeInput.value;
+
+carouselRangeInput.addEventListener('input', () => {
+  const currentRangeValue = carouselRangeInput.value;
+  activeItemIndex = currentRangeValue - 1;
+  if (currentRangeValue > previousCarouselRangeValue) {
+    for (let i = previousCarouselRangeValue; i < currentRangeValue; i++) {
+      handleNextInput();
+    }
+  }
+  if (currentRangeValue < previousCarouselRangeValue) {
+    for (let i = previousCarouselRangeValue; i > currentRangeValue; i--) {
+      handlePreviousInput();
+    }
+  }
+  updateRangeValue();
+  previousCarouselRangeValue = currentRangeValue;
+})
+
+window.addEventListener('resize', calculateCarousel);
+
+calculateCarousel();
