@@ -18,7 +18,6 @@ body {
 
 .list li {
   list-style-type: none;
-
   width: 200px;
   height: 200px;
   opacity: .25;

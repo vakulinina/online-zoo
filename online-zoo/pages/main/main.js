@@ -1,4 +1,5 @@
 // Theme switch
+
 const themeToggle = document.querySelector('.toggle-input');
 const currentTheme = localStorage.getItem('theme');
 
@@ -23,18 +24,20 @@ const toggleTheme = (theme) => {
     };
     headerLogo.setAttribute('src', '../../assets/logo-light.svg');
     map.style.backgroundImage = 'url("../../assets/map-light.svg")';
+    menuButton.classList.add('menu-btn-fill-dark');
+    testimonialCards.forEach(card => card.classList.add('testimonial-card-dark'));
+    tooltips.forEach(tooltip => tooltip.classList.add('tooltip-dark'));
   } else {
     localStorage.setItem('theme', 'light')
     for (let prop in commonStyleProps) {
       document.documentElement.style.removeProperty(prop);
     };
     headerLogo.setAttribute('src', '../../assets/logo-dark.svg');
-    map.style.backgroundImage = ''
+    map.style.backgroundImage = '';
+    menuButton.classList.remove('menu-btn-fill-dark');
+    testimonialCards.forEach(card => card.classList.remove('testimonial-card-dark'));
+    tooltips.forEach(tooltip => tooltip.classList.remove('tooltip-dark'));
   }
-
-  menuButton.classList.toggle('menu-btn-fill-dark');
-  testimonialCards.forEach(card => card.classList.toggle('testimonial-card-dark'));
-  tooltips.forEach(tooltip => tooltip.classList.toggle('tooltip-dark'));
 }
 
 if (currentTheme === 'dark') {
