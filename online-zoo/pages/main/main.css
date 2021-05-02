@@ -620,7 +620,6 @@ address {
   left: 0;
   display: flex;
   justify-content: space-between;
-  cursor: pointer;
   transition: all 1s ease;
 }
 

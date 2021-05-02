@@ -1,63 +1,5 @@
 'use strict'
 
-// Theme switch
-
-const themeToggle = document.querySelector('.toggle-input');
-const currentTheme = localStorage.getItem('theme');
-
-const toggleTheme = (theme) => {
-  const headerLogo = document.querySelector('.header-logo');
-  const menuButton = document.querySelector('.menu-btn-fill');
-  const tooltips = document.querySelectorAll('.tooltip');
-  const testimonialCards = document.querySelectorAll('.testimonial-card');
-  const map = document.querySelector('.map-container');
-  const commonStyleProps = {
-    '--header-background-color': '#333',
-    '--main-block-background-light': '#333',
-    '--main-block-background-dark': '#4f4f4f',
-    '--title-color': '#fefefe',
-    '--paragraph-color': '#f2f2f2',
-  };
-
-  if (theme === 'dark') {
-    localStorage.setItem('theme', 'dark');
-    for (let prop in commonStyleProps) {
-      document.documentElement.style.setProperty(prop, commonStyleProps[prop]);
-    };
-    headerLogo.setAttribute('src', '../../assets/logo-light.svg');
-    map.style.backgroundImage = 'url("../../assets/map-light.svg")';
-    menuButton.classList.add('menu-btn-fill-dark');
-    testimonialCards.forEach(card => card.classList.add('testimonial-card-dark'));
-    tooltips.forEach(tooltip => tooltip.classList.add('tooltip-dark'));
-  } else {
-    localStorage.setItem('theme', 'light')
-    for (let prop in commonStyleProps) {
-      document.documentElement.style.removeProperty(prop);
-    };
-    headerLogo.setAttribute('src', '../../assets/logo-dark.svg');
-    map.style.backgroundImage = '';
-    menuButton.classList.remove('menu-btn-fill-dark');
-    testimonialCards.forEach(card => card.classList.remove('testimonial-card-dark'));
-    tooltips.forEach(tooltip => tooltip.classList.remove('tooltip-dark'));
-  }
-}
-
-if (currentTheme === 'dark') {
-  themeToggle.checked = true;
-  toggleTheme('dark');
-} else {
-  themeToggle.checked = false;
-  toggleTheme('light');
-}
-
-themeToggle.addEventListener('change', ({ target }) => {
-  if (target.checked) {
-    toggleTheme('dark');
-  } else {
-    toggleTheme('light');
-  }
-})
-
 //Watch online carousel
 
 const animalsGallery = document.querySelector('.animals-gallery');
@@ -67,8 +9,7 @@ const animals = [
   {
     name: 'Eagle',
     img: '../../assets/eagle.png',
-    description: `Eagle’s name is Vincent. He is 3 years old. Vincent is from America. He
-    loves life.`,
+    description: `Eagle’s name is Vincent. He is 3 years old. Vincent is from America. He loves life.`,
   },
   {
     name: 'Panda',
@@ -239,6 +180,7 @@ const carouselRangeOutput = document.querySelector('#pets-carousel-range-output'
 const carouselRangeInput = document.querySelector('#pets-carousel-range-input');
 const displayedItems = 4;
 let activeItemIndex = 0;
+let previousCarouselRangeValue = carouselRangeInput.value;
 let stepWidth;
 let sliderWidth;
 let lastDisplayedImageIndex;
@@ -259,12 +201,10 @@ const calculateCarousel = () => {
   sliderWidth = document.querySelector('.carousel-items-displayed').offsetWidth;
   stepWidth = sliderWidth / displayedItems;
   carouselLine.style.width = `${stepWidth * carouselItems.length}px`;
-
   carouselItems.forEach(item => {
     item.style.width = `${stepWidth * 0.92}px`;
     item.style.height = `${stepWidth * 1.32}px`;
   })
-
   rollCarousel();
 }
 
@@ -316,8 +256,6 @@ previousButton.addEventListener('click', () => {
   carouselRangeInput.value = activeItemIndex + 1;
   updateRangeValue();
 })
-
-let previousCarouselRangeValue = carouselRangeInput.value;
 
 carouselRangeInput.addEventListener('input', () => {
   const currentRangeValue = carouselRangeInput.value;
