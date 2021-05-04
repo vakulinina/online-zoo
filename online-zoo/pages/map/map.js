@@ -101,6 +101,17 @@ carouselRangeInput.addEventListener('input', () => {
   previousCarouselRangeValue = currentRangeValue;
 })
 
+carouselLine.addEventListener('click', (event) => {
+  event.preventDefault();
+  const currentActiveItem = [...carouselItems].find(item => item.classList.contains(active));
+  currentActiveItem.classList.remove(active);
+  const newActiveItem = event.target.closest('.nav-animals-item');
+  newActiveItem.classList.add(active);
+  activeItemIndex = [...carouselItems].indexOf(newActiveItem);
+  carouselRangeInput.value = activeItemIndex + 1;
+  updateRangeValue();
+})
+
 window.addEventListener('resize', calculateCarousel);
 
 calculateCarousel();
