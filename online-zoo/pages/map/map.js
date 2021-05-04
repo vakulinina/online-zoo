@@ -114,7 +114,7 @@ carouselLine.addEventListener('click', (event) => {
   activeItemIndex = [...carouselItems].indexOf(newActiveItem);
   carouselRangeInput.value = activeItemIndex + 1;
   updateRangeValue();
-  updateButtonLink(newActiveItem.firstElementChild.title);
+  updateButtonLink(newActiveItem.firstElementChild.title.toLowerCase());
 })
 
 window.addEventListener('resize', calculateCarousel);
