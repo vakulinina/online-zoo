@@ -9,10 +9,10 @@ let stepWidth = parseInt(carouselItemStyle.width, 10) + parseInt(carouselItemSty
 let activeItemIndex = 1;
 let displayedItems;
 let sliderWidth;
-// const carouselRangeOutput = document.querySelector('#pets-carousel-range-output');
-// const carouselRangeInput = document.querySelector('#pets-carousel-range-input');
-// let previousCarouselRangeValue = carouselRangeInput.value;
-// let lastDisplayedImageIndex;
+const carouselRangeOutput = document.querySelector('#nav-animals-range-output');
+const carouselRangeInput = document.querySelector('#nav-animals-range-input');
+let previousCarouselRangeValue = carouselRangeInput.value;
+let lastDisplayedImageIndex;
 
 const calculateCarousel = () => {
   const slider = document.querySelector('.nav-animals-slider');
@@ -21,6 +21,10 @@ const calculateCarousel = () => {
   slider.style.width = `${sliderWidth}px`;
   stepWidth = sliderWidth / displayedItems;
   rollCarousel();
+}
+
+const updateRangeValue = () => {
+  carouselRangeOutput.innerHTML = `0${carouselRangeInput.value}/<span class="slider-value-total">0${carouselItems.length}</span>`
 }
 
 const rollCarousel = () => {
@@ -56,7 +60,7 @@ const handlePreviousInput = () => {
     rollCarousel();
     currentActiveItem.classList.remove(active);
     carouselItems[activeItemIndex].classList.add(active);
-  } else if (activeItemIndex <= lastDisplayedImageIndex - displayedItems || activeItemIndex < carouselItems.length - displayedItems) {
+  } else if (activeItemIndex <= (lastDisplayedImageIndex - displayedItems) || activeItemIndex < (carouselItems.length - displayedItems)) {
     rollCarousel();
     currentActiveItem.classList.remove(active);
     carouselItems[activeItemIndex].classList.add(active);
@@ -69,15 +73,32 @@ const handlePreviousInput = () => {
 nextButton.addEventListener('click', () => {
   activeItemIndex++;
   handleNextInput();
-  // carouselRangeInput.value = activeItemIndex + 1;
-  // updateRangeValue();
+  carouselRangeInput.value = activeItemIndex + 1;
+  updateRangeValue();
 })
 
 previousButton.addEventListener('click', () => {
   activeItemIndex--;
   handlePreviousInput();
-  // carouselRangeInput.value = activeItemIndex + 1;
-  // updateRangeValue();
+  carouselRangeInput.value = activeItemIndex + 1;
+  updateRangeValue();
+})
+
+carouselRangeInput.addEventListener('input', () => {
+  const currentRangeValue = carouselRangeInput.value;
+  activeItemIndex = currentRangeValue - 1;
+  if (currentRangeValue > previousCarouselRangeValue) {
+    for (let i = previousCarouselRangeValue; i < currentRangeValue; i++) {
+      handleNextInput();
+    }
+  }
+  if (currentRangeValue < previousCarouselRangeValue) {
+    for (let i = previousCarouselRangeValue; i > currentRangeValue; i--) {
+      handlePreviousInput();
+    }
+  }
+  updateRangeValue();
+  previousCarouselRangeValue = currentRangeValue;
 })
 
 window.addEventListener('resize', calculateCarousel);
