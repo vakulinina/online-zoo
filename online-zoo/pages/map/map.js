@@ -101,6 +101,10 @@ carouselRangeInput.addEventListener('input', () => {
   previousCarouselRangeValue = currentRangeValue;
 })
 
+const updateButtonLink = (animal) => {
+  document.querySelector('#map-watch-btn').setAttribute('href', `../zoos/${animal}.html`)
+}
+
 carouselLine.addEventListener('click', (event) => {
   event.preventDefault();
   const currentActiveItem = [...carouselItems].find(item => item.classList.contains(active));
@@ -110,12 +114,12 @@ carouselLine.addEventListener('click', (event) => {
   activeItemIndex = [...carouselItems].indexOf(newActiveItem);
   carouselRangeInput.value = activeItemIndex + 1;
   updateRangeValue();
+  updateButtonLink(newActiveItem.firstElementChild.title);
 })
 
 window.addEventListener('resize', calculateCarousel);
 
 calculateCarousel();
-
 
 
 // Pets-in-zoo carousel
