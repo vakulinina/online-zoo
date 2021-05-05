@@ -35,7 +35,44 @@ const rollCarousel = () => {
   }
 }
 
-const handleNextInput = () => {
+// const handleNextInput = () => {
+//   const currentActiveItem = [...carouselItems].find(item => item.classList.contains(active));
+//   if (activeItemIndex >= carouselItems.length) {
+//     activeItemIndex = 0;
+//     rollCarousel();
+//     currentActiveItem.classList.remove(active);
+//     carouselItems[activeItemIndex].classList.add(active);
+//   } else if (activeItemIndex >= displayedItems) {
+//     rollCarousel();
+//     lastDisplayedImageIndex = activeItemIndex;
+//     currentActiveItem.classList.remove(active);
+//     carouselItems[activeItemIndex].classList.add(active);
+//   } else {
+//     currentActiveItem.classList.remove(active);
+//     carouselItems[activeItemIndex].classList.add(active);
+//   }
+// }
+
+// const handlePreviousInput = () => {
+//   const currentActiveItem = [...carouselItems].find(item => item.classList.contains(active));
+//   if (activeItemIndex < 0) {
+//     activeItemIndex = carouselItems.length - 1;
+//     rollCarousel();
+//     currentActiveItem.classList.remove(active);
+//     carouselItems[activeItemIndex].classList.add(active);
+//   } else if (activeItemIndex <= (lastDisplayedImageIndex - displayedItems) || activeItemIndex < (carouselItems.length - displayedItems)) {
+//     rollCarousel();
+//     currentActiveItem.classList.remove(active);
+//     carouselItems[activeItemIndex].classList.add(active);
+//   } else {
+//     currentActiveItem.classList.remove(active);
+//     carouselItems[activeItemIndex].classList.add(active);
+//   }
+// }
+
+const markers = document.querySelectorAll('.map-marker');
+
+const activateIcon = () => {
   const currentActiveItem = [...carouselItems].find(item => item.classList.contains(active));
   if (activeItemIndex >= carouselItems.length) {
     activeItemIndex = 0;
@@ -47,15 +84,7 @@ const handleNextInput = () => {
     lastDisplayedImageIndex = activeItemIndex;
     currentActiveItem.classList.remove(active);
     carouselItems[activeItemIndex].classList.add(active);
-  } else {
-    currentActiveItem.classList.remove(active);
-    carouselItems[activeItemIndex].classList.add(active);
-  }
-}
-
-const handlePreviousInput = () => {
-  const currentActiveItem = [...carouselItems].find(item => item.classList.contains(active));
-  if (activeItemIndex < 0) {
+  } else if (activeItemIndex < 0) {
     activeItemIndex = carouselItems.length - 1;
     rollCarousel();
     currentActiveItem.classList.remove(active);
@@ -70,18 +99,33 @@ const handlePreviousInput = () => {
   }
 }
 
+const activateMarker = (animal) => {
+  markers.forEach(marker => {
+    marker.classList.remove('map-marker-active');
+    if (marker.title.toLowerCase() === animal) {
+      marker.classList.add('map-marker-active');
+    }
+  })
+}
+
 nextButton.addEventListener('click', () => {
   activeItemIndex++;
-  handleNextInput();
+  activateIcon();
   carouselRangeInput.value = activeItemIndex + 1;
   updateRangeValue();
+  if (markers[activeItemIndex]) {
+    activateMarker(markers[activeItemIndex].title.toLowerCase());
+  }
 })
 
 previousButton.addEventListener('click', () => {
   activeItemIndex--;
-  handlePreviousInput();
+  activateIcon();
   carouselRangeInput.value = activeItemIndex + 1;
   updateRangeValue();
+  if (markers[activeItemIndex]) {
+    activateMarker(markers[activeItemIndex].title.toLowerCase());
+  }
 })
 
 carouselRangeInput.addEventListener('input', () => {
@@ -89,13 +133,16 @@ carouselRangeInput.addEventListener('input', () => {
   activeItemIndex = currentRangeValue - 1;
   if (currentRangeValue > previousCarouselRangeValue) {
     for (let i = previousCarouselRangeValue; i < currentRangeValue; i++) {
-      handleNextInput();
+      activateIcon();
     }
   }
   if (currentRangeValue < previousCarouselRangeValue) {
     for (let i = previousCarouselRangeValue; i > currentRangeValue; i--) {
-      handlePreviousInput();
+      activateIcon();
     }
+  }
+  if (markers[activeItemIndex]) {
+    activateMarker(markers[activeItemIndex].title.toLowerCase());
   }
   updateRangeValue();
   previousCarouselRangeValue = currentRangeValue;
@@ -116,119 +163,21 @@ carouselLine.addEventListener('click', (event) => {
   carouselRangeInput.value = activeItemIndex + 1;
   updateRangeValue();
   updateButtonLink(newActiveItem.firstElementChild.title.toLowerCase());
+  activateMarker(newActiveItem.firstElementChild.title.toLowerCase());
+})
+
+document.querySelector('.map-container').addEventListener('click', ({ target }) => {
+  if (target.classList.contains('marker-icon') || target.classList.contains('marker-photo')) {
+    const selectedMarker = target.closest('.map-marker');
+    activeItemIndex = [...markers].indexOf(selectedMarker);
+    activateMarker(selectedMarker.title.toLowerCase());
+    activateIcon();
+    updateButtonLink(selectedMarker.title.toLowerCase());
+    carouselRangeInput.value = activeItemIndex + 1;
+    updateRangeValue();
+  }
 })
 
 window.addEventListener('resize', calculateCarousel);
 
 calculateCarousel();
-
-
-// Pets-in-zoo carousel
-
-// {
-//   const nextButton = document.querySelector('#pets-carousel-next');
-//   const previousButton = document.querySelector('#pets-carousel-prev');
-//   const carouselLine = document.querySelector('.carousel-items');
-//   const carouselItems = document.querySelectorAll('.carousel-item');
-//   const carouselRangeOutput = document.querySelector('#pets-carousel-range-output');
-//   const carouselRangeInput = document.querySelector('#pets-carousel-range-input');
-//   const displayedItems = 4;
-//   let activeItemIndex = 0;
-//   let previousCarouselRangeValue = carouselRangeInput.value;
-//   let stepWidth;
-//   let sliderWidth;
-//   let lastDisplayedImageIndex;
-
-//   const updateRangeValue = () => {
-//     carouselRangeOutput.innerHTML = `0${carouselRangeInput.value}/<span class="slider-value-total">0${carouselItems.length}</span>`
-//   }
-
-//   const rollCarousel = () => {
-//     if (activeItemIndex < displayedItems) {
-//       carouselLine.style.left = 0;
-//     } else {
-//       carouselLine.style.left = `-${(activeItemIndex + 1 - displayedItems) * stepWidth}px`;
-//     }
-//   }
-
-//   const calculateCarousel = () => {
-//     sliderWidth = document.querySelector('.carousel-items-displayed').offsetWidth;
-//     stepWidth = sliderWidth / displayedItems;
-//     carouselLine.style.width = `${stepWidth * carouselItems.length}px`;
-//     carouselItems.forEach(item => {
-//       item.style.width = `${stepWidth * 0.92}px`;
-//       item.style.height = `${stepWidth * 1.32}px`;
-//     })
-//     rollCarousel();
-//   }
-
-//   const handleNextInput = () => {
-//     const currentActiveItem = [...carouselItems].find(item => item.classList.contains('carousel-item-active'));
-//     if (activeItemIndex >= carouselItems.length) {
-//       activeItemIndex = 0;
-//       rollCarousel();
-//       currentActiveItem.classList.remove('carousel-item-active');
-//       carouselItems[activeItemIndex].classList.add('carousel-item-active');
-//     } else if (activeItemIndex >= displayedItems) {
-//       rollCarousel();
-//       lastDisplayedImageIndex = activeItemIndex;
-//       currentActiveItem.classList.remove('carousel-item-active');
-//       carouselItems[activeItemIndex].classList.add('carousel-item-active');
-//     } else {
-//       currentActiveItem.classList.remove('carousel-item-active');
-//       carouselItems[activeItemIndex].classList.add('carousel-item-active');
-//     }
-//   }
-
-//   const handlePreviousInput = () => {
-//     const currentActiveItem = [...carouselItems].find(item => item.classList.contains('carousel-item-active'));
-//     if (activeItemIndex < 0) {
-//       activeItemIndex = carouselItems.length - 1;
-//       rollCarousel();
-//       currentActiveItem.classList.remove('carousel-item-active');
-//       carouselItems[activeItemIndex].classList.add('carousel-item-active');
-//     } else if (activeItemIndex <= lastDisplayedImageIndex - displayedItems || activeItemIndex < carouselItems.length - displayedItems) {
-//       rollCarousel();
-//       currentActiveItem.classList.remove('carousel-item-active');
-//       carouselItems[activeItemIndex].classList.add('carousel-item-active');
-//     } else {
-//       currentActiveItem.classList.remove('carousel-item-active');
-//       carouselItems[activeItemIndex].classList.add('carousel-item-active');
-//     }
-//   }
-
-//   nextButton.addEventListener('click', () => {
-//     activeItemIndex++;
-//     handleNextInput();
-//     carouselRangeInput.value = activeItemIndex + 1;
-//     updateRangeValue();
-//   })
-
-//   previousButton.addEventListener('click', () => {
-//     activeItemIndex--;
-//     handlePreviousInput();
-//     carouselRangeInput.value = activeItemIndex + 1;
-//     updateRangeValue();
-//   })
-
-//   carouselRangeInput.addEventListener('input', () => {
-//     const currentRangeValue = carouselRangeInput.value;
-//     activeItemIndex = currentRangeValue - 1;
-//     if (currentRangeValue > previousCarouselRangeValue) {
-//       for (let i = previousCarouselRangeValue; i < currentRangeValue; i++) {
-//         handleNextInput();
-//       }
-//     }
-//     if (currentRangeValue < previousCarouselRangeValue) {
-//       for (let i = previousCarouselRangeValue; i > currentRangeValue; i--) {
-//         handlePreviousInput();
-//       }
-//     }
-//     updateRangeValue();
-//     previousCarouselRangeValue = currentRangeValue;
-//   })
-
-//   window.addEventListener('resize', calculateCarousel);
-
-//   calculateCarousel();
-// }
