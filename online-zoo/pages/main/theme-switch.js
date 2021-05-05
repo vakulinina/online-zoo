@@ -20,7 +20,9 @@ const toggleTheme = (theme) => {
       document.documentElement.style.setProperty(prop, commonStyleProps[prop]);
     };
     headerLogo.setAttribute('src', '../../assets/logo-light.svg');
-    map.style.backgroundImage = 'url("../../assets/map-light.svg")';
+    if (map) {
+      map.style.backgroundImage = 'url("../../assets/map-light.svg")';
+    }
     menuButton.classList.add('menu-btn-fill-dark');
     testimonialCards.forEach(card => card.classList.add('testimonial-card-dark'));
     tooltips.forEach(tooltip => tooltip.classList.add('tooltip-dark'));
@@ -30,7 +32,9 @@ const toggleTheme = (theme) => {
       document.documentElement.style.removeProperty(prop);
     };
     headerLogo.setAttribute('src', '../../assets/logo-dark.svg');
-    map.style.backgroundImage = '';
+    if (map) {
+      map.style.backgroundImage = '';
+    }
     menuButton.classList.remove('menu-btn-fill-dark');
     testimonialCards.forEach(card => card.classList.remove('testimonial-card-dark'));
     tooltips.forEach(tooltip => tooltip.classList.remove('tooltip-dark'));
