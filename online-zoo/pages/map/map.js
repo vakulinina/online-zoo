@@ -35,68 +35,23 @@ const rollCarousel = () => {
   }
 }
 
-// const handleNextInput = () => {
-//   const currentActiveItem = [...carouselItems].find(item => item.classList.contains(active));
-//   if (activeItemIndex >= carouselItems.length) {
-//     activeItemIndex = 0;
-//     rollCarousel();
-//     currentActiveItem.classList.remove(active);
-//     carouselItems[activeItemIndex].classList.add(active);
-//   } else if (activeItemIndex >= displayedItems) {
-//     rollCarousel();
-//     lastDisplayedImageIndex = activeItemIndex;
-//     currentActiveItem.classList.remove(active);
-//     carouselItems[activeItemIndex].classList.add(active);
-//   } else {
-//     currentActiveItem.classList.remove(active);
-//     carouselItems[activeItemIndex].classList.add(active);
-//   }
-// }
-
-// const handlePreviousInput = () => {
-//   const currentActiveItem = [...carouselItems].find(item => item.classList.contains(active));
-//   if (activeItemIndex < 0) {
-//     activeItemIndex = carouselItems.length - 1;
-//     rollCarousel();
-//     currentActiveItem.classList.remove(active);
-//     carouselItems[activeItemIndex].classList.add(active);
-//   } else if (activeItemIndex <= (lastDisplayedImageIndex - displayedItems) || activeItemIndex < (carouselItems.length - displayedItems)) {
-//     rollCarousel();
-//     currentActiveItem.classList.remove(active);
-//     carouselItems[activeItemIndex].classList.add(active);
-//   } else {
-//     currentActiveItem.classList.remove(active);
-//     carouselItems[activeItemIndex].classList.add(active);
-//   }
-// }
-
 const markers = document.querySelectorAll('.map-marker');
 
 const activateIcon = () => {
-  const currentActiveItem = [...carouselItems].find(item => item.classList.contains(active));
+  carouselItems.forEach(item => item.classList.remove(active));
   if (activeItemIndex >= carouselItems.length) {
     activeItemIndex = 0;
     rollCarousel();
-    currentActiveItem.classList.remove(active);
-    carouselItems[activeItemIndex].classList.add(active);
   } else if (activeItemIndex >= displayedItems) {
     rollCarousel();
     lastDisplayedImageIndex = activeItemIndex;
-    currentActiveItem.classList.remove(active);
-    carouselItems[activeItemIndex].classList.add(active);
   } else if (activeItemIndex < 0) {
     activeItemIndex = carouselItems.length - 1;
     rollCarousel();
-    currentActiveItem.classList.remove(active);
-    carouselItems[activeItemIndex].classList.add(active);
   } else if (activeItemIndex <= (lastDisplayedImageIndex - displayedItems) || activeItemIndex < (carouselItems.length - displayedItems)) {
     rollCarousel();
-    currentActiveItem.classList.remove(active);
-    carouselItems[activeItemIndex].classList.add(active);
-  } else {
-    currentActiveItem.classList.remove(active);
-    carouselItems[activeItemIndex].classList.add(active);
   }
+  carouselItems[activeItemIndex].classList.add(active);
 }
 
 const activateMarker = (animal) => {
