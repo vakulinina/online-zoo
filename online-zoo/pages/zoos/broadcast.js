@@ -8,6 +8,8 @@ const urlStore = {
   3: previewList.item(2).src,
 }
 const streamHandler = ({ target }) => {
+  console.log(target);
+
   const streamWidth = 0.31; // in percent
   const width = target.offsetWidth;
   if (event.offsetX < streamWidth * width) {

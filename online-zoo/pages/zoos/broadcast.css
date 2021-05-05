@@ -167,6 +167,7 @@
   flex-wrap: nowrap;
   width: 100%;
   margin-bottom: 30px;
+  cursor: pointer;
 }
 
 .broadcast-preview-wrapper {
