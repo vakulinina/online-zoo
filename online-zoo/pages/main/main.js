@@ -47,6 +47,7 @@ const animals = [
     description: `Leopard's name is Juan. He is 6 years old. Juan is from Central America.`,
   }
 ];
+let previousRangeValue = rangeSlider.value;
 let animalIndex = 1;
 
 const updateSliderValue = () => {
@@ -152,8 +153,6 @@ animalsGallery.addEventListener('click', ({ target }) => {
   updateSliderValue();
 })
 
-let previousRangeValue = rangeSlider.value;
-
 rangeSlider.addEventListener('input', () => {
   const currentSliderValue = rangeSlider.value;
   if (currentSliderValue > previousRangeValue) {
@@ -178,6 +177,7 @@ const carouselLine = document.querySelector('.carousel-items');
 const carouselItems = document.querySelectorAll('.carousel-item');
 const carouselRangeOutput = document.querySelector('#pets-carousel-range-output');
 const carouselRangeInput = document.querySelector('#pets-carousel-range-input');
+const active = 'carousel-item-active';
 const displayedItems = 4;
 let activeItemIndex = 0;
 let previousCarouselRangeValue = carouselRangeInput.value;
@@ -209,38 +209,26 @@ const calculateCarousel = () => {
 }
 
 const handleNextInput = () => {
-  const currentActiveItem = [...carouselItems].find(item => item.classList.contains('carousel-item-active'));
+  carouselItems.forEach(item => item.classList.remove(active));
   if (activeItemIndex >= carouselItems.length) {
     activeItemIndex = 0;
     rollCarousel();
-    currentActiveItem.classList.remove('carousel-item-active');
-    carouselItems[activeItemIndex].classList.add('carousel-item-active');
   } else if (activeItemIndex >= displayedItems) {
     rollCarousel();
     lastDisplayedImageIndex = activeItemIndex;
-    currentActiveItem.classList.remove('carousel-item-active');
-    carouselItems[activeItemIndex].classList.add('carousel-item-active');
-  } else {
-    currentActiveItem.classList.remove('carousel-item-active');
-    carouselItems[activeItemIndex].classList.add('carousel-item-active');
   }
+  carouselItems[activeItemIndex].classList.add(active);
 }
 
 const handlePreviousInput = () => {
-  const currentActiveItem = [...carouselItems].find(item => item.classList.contains('carousel-item-active'));
+  carouselItems.forEach(item => item.classList.remove(active));
   if (activeItemIndex < 0) {
     activeItemIndex = carouselItems.length - 1;
     rollCarousel();
-    currentActiveItem.classList.remove('carousel-item-active');
-    carouselItems[activeItemIndex].classList.add('carousel-item-active');
   } else if (activeItemIndex <= lastDisplayedImageIndex - displayedItems || activeItemIndex < carouselItems.length - displayedItems) {
     rollCarousel();
-    currentActiveItem.classList.remove('carousel-item-active');
-    carouselItems[activeItemIndex].classList.add('carousel-item-active');
-  } else {
-    currentActiveItem.classList.remove('carousel-item-active');
-    carouselItems[activeItemIndex].classList.add('carousel-item-active');
   }
+  carouselItems[activeItemIndex].classList.add(active);
 }
 
 nextButton.addEventListener('click', () => {

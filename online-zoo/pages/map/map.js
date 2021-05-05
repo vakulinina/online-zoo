@@ -106,12 +106,11 @@ const updateButtonLink = (animal) => {
   document.querySelector('#map-watch-btn').setAttribute('href', `../zoos/${animal}.html`)
 }
 
-carouselLine.addEventListener('click', (event) => {
+carouselLine.addEventListener('click', ({ target }) => {
   event.preventDefault();
-  if (!event.target.classList.contains('nav-animals-item-img')) return;
-  const currentActiveItem = [...carouselItems].find(item => item.classList.contains(active));
-  currentActiveItem.classList.remove(active);
-  const newActiveItem = event.target.closest('.nav-animals-item');
+  if (!target.classList.contains('nav-animals-item-img')) return;
+  const newActiveItem = target.closest('.nav-animals-item');
+  carouselItems.forEach(item => item.classList.remove(active));
   newActiveItem.classList.add(active);
   activeItemIndex = [...carouselItems].indexOf(newActiveItem);
   carouselRangeInput.value = activeItemIndex + 1;
