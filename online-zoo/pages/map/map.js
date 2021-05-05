@@ -4,13 +4,14 @@ const previousButton = document.querySelector('#nav-animals-previous-btn');
 const carouselLine = document.querySelector('.nav-animals-list');
 const carouselItem = document.querySelector('.nav-animals-item');
 const carouselItemStyle = window.getComputedStyle(carouselItem);
+const carouselRangeOutput = document.querySelector('#nav-animals-range-output');
+const carouselRangeInput = document.querySelector('#nav-animals-range-input');
+const markers = document.querySelectorAll('.map-marker');
 const active = 'nav-animals-item-selected';
 let stepWidth = parseInt(carouselItemStyle.width, 10) + parseInt(carouselItemStyle.marginLeft, 10) + parseInt(carouselItemStyle.marginRight, 10);
 let activeItemIndex = 1;
 let displayedItems;
 let sliderWidth;
-const carouselRangeOutput = document.querySelector('#nav-animals-range-output');
-const carouselRangeInput = document.querySelector('#nav-animals-range-input');
 let previousCarouselRangeValue = carouselRangeInput.value;
 let lastDisplayedImageIndex;
 
@@ -34,8 +35,6 @@ const rollCarousel = () => {
     carouselLine.style.left = `-${(activeItemIndex + 1 - displayedItems) * stepWidth}px`;
   }
 }
-
-const markers = document.querySelectorAll('.map-marker');
 
 const activateIcon = () => {
   carouselItems.forEach(item => item.classList.remove(active));
