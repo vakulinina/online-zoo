@@ -107,6 +107,7 @@ const updateButtonLink = (animal) => {
 
 carouselLine.addEventListener('click', (event) => {
   event.preventDefault();
+  if (!event.target.classList.contains('nav-animals-item-img')) return;
   const currentActiveItem = [...carouselItems].find(item => item.classList.contains(active));
   currentActiveItem.classList.remove(active);
   const newActiveItem = event.target.closest('.nav-animals-item');
