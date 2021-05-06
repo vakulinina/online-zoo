@@ -188,6 +188,7 @@ address {
 
 .toggle-input:checked ~ .toggle-fill::after {
   transform: translateX(22px);
+  background-color: #1b1b1b;
 }
 
 .menu-btn {
