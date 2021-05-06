@@ -84,7 +84,7 @@ const slideNext = () => {
             <img src="${nextAnimal.img}" alt="${nextAnimal.name}">
             <div class="animal-card-description">
               <p class="animal-card-text">${nextAnimal.description}</p>
-              <a class="watch-btn-small" href="../zoos/${nextAnimal.name}.html">Watch online</a>
+              <a class="watch-btn-small" href="../zoos/${nextAnimal.name.toLowerCase()}.html">Watch online</a>
               <button class="donate-btn-small">Donate</button>
             </div>
           </article>
