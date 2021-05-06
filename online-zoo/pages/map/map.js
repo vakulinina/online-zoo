@@ -70,6 +70,7 @@ nextButton.addEventListener('click', () => {
   if (markers[activeItemIndex]) {
     activateMarker(markers[activeItemIndex].title.toLowerCase());
   }
+  updateButtonLink(carouselItems[activeItemIndex].firstElementChild.title.toLowerCase());
 })
 
 previousButton.addEventListener('click', () => {
@@ -80,6 +81,7 @@ previousButton.addEventListener('click', () => {
   if (markers[activeItemIndex]) {
     activateMarker(markers[activeItemIndex].title.toLowerCase());
   }
+  updateButtonLink(carouselItems[activeItemIndex].firstElementChild.title.toLowerCase());
 })
 
 carouselRangeInput.addEventListener('input', () => {
