@@ -28,6 +28,10 @@ const updateRangeValue = () => {
   carouselRangeOutput.innerHTML = `0${carouselRangeInput.value}/<span class="slider-value-total">0${carouselItems.length}</span>`
 }
 
+const updateButtonLink = (animal) => {
+  document.querySelector('#map-watch-btn').setAttribute('href', `../zoos/${animal}.html`)
+}
+
 const rollCarousel = () => {
   if (activeItemIndex < displayedItems) {
     carouselLine.style.left = 0;
@@ -101,12 +105,9 @@ carouselRangeInput.addEventListener('input', () => {
     activateMarker(markers[activeItemIndex].title.toLowerCase());
   }
   updateRangeValue();
+  updateButtonLink(carouselItems[activeItemIndex].firstElementChild.title.toLowerCase())
   previousCarouselRangeValue = currentRangeValue;
 })
-
-const updateButtonLink = (animal) => {
-  document.querySelector('#map-watch-btn').setAttribute('href', `../zoos/${animal}.html`)
-}
 
 carouselLine.addEventListener('click', ({ target }) => {
   event.preventDefault();
