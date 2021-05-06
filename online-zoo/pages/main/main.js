@@ -235,6 +235,7 @@ nextButton.addEventListener('click', () => {
   activeItemIndex++;
   handleNextInput();
   carouselRangeInput.value = activeItemIndex + 1;
+  previousCarouselRangeValue = carouselRangeInput.value;
   updateRangeValue();
 })
 
@@ -242,6 +243,7 @@ previousButton.addEventListener('click', () => {
   activeItemIndex--;
   handlePreviousInput();
   carouselRangeInput.value = activeItemIndex + 1;
+  previousCarouselRangeValue = carouselRangeInput.value;
   updateRangeValue();
 })
 
