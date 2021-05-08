@@ -3,8 +3,8 @@ const themeToggle = document.querySelector('.toggle-input');
 const toggleTheme = (theme) => {
   const headerLogo = document.querySelector('.header-logo');
   const menuButton = document.querySelector('.menu-btn-fill');
-  const prevButton = document.querySelector('.previous-btn');
-  const nextButton = document.querySelector('.next-btn');
+  const prevButton = document.querySelectorAll('.previous-btn');
+  const nextButton = document.querySelectorAll('.next-btn');
   const tooltips = document.querySelectorAll('.tooltip');
   const testimonialCards = document.querySelectorAll('.testimonial-card');
   const map = document.querySelector('.map-container');
@@ -22,11 +22,11 @@ const toggleTheme = (theme) => {
       document.documentElement.style.setProperty(prop, commonStyleProps[prop]);
     };
     headerLogo.setAttribute('src', '../../assets/logo-light.svg');
-    if (prevButton) {
-      prevButton.classList.add('previous-btn-dark');
+    if (prevButton.length > 0) {
+      prevButton.forEach(button => button.classList.add('previous-btn-dark'));
     }
-    if (nextButton) {
-      nextButton.classList.add('next-btn-dark');
+    if (nextButton.length > 0) {
+      nextButton.forEach(button => button.classList.add('next-btn-dark'));
     }
     if (map) {
       map.style.backgroundImage = 'url("../../assets/map-light.svg")';
@@ -40,11 +40,11 @@ const toggleTheme = (theme) => {
       document.documentElement.style.removeProperty(prop);
     };
     headerLogo.setAttribute('src', '../../assets/logo-dark.svg');
-    if (prevButton) {
-      prevButton.classList.remove('previous-btn-dark');
+    if (prevButton.length > 0) {
+      prevButton.forEach(button => button.classList.remove('previous-btn-dark'));
     }
-    if (nextButton) {
-      nextButton.classList.remove('next-btn-dark');
+    if (nextButton.length > 0) {
+      nextButton.forEach(button => button.classList.remove('next-btn-dark'));
     }
     if (map) {
       map.style.backgroundImage = '';
