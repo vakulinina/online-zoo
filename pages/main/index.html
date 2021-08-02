@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../pages/main/main.css" type="text/css">
+  <title>Online Zoo</title>
+</head>
+
+<body>
+  <header>
+    <h1 class="visually-hidden">Online Zoo</h1>
+    <div class="header-wrap">
+      <a class="logo" href="../main/index.html">
+        <img class="header-logo" src="../../assets/logo-dark.svg" alt="Online Zoo">
+      </a>
+      <nav class="nav-wrap">
+        <label class="menu-btn" for="menu-btn-input"><span class="menu-btn-fill"></span></label>
+        <input class="menu-btn-input visually-hidden" id="menu-btn-input" type="checkbox">
+        <ul class="nav-links">
+          <li><a class="nav-link nav-link-active" href="../main/index.html">About</a></li>
+          <li><a class="nav-link" href="../zoos/panda.html">Zoos</a></li>
+          <li><a class="nav-link" href="../map/map.html">Map</a></li>
+          <li><a class="nav-link" href="#contact-form">Contact Us</a></li>
+          <li><a class="nav-link" href="https://www.figma.com/file/HKt5Nlx0jghQtJp6jW9q8F/zooApp">Design</a></li>
+        </ul>
+      </nav>
+      <label class="theme-toggle">
+        <input class="toggle-input visually-hidden" type="checkbox">
+        <span class="toggle-fill"></span>
+      </label>
+    </div>
+  </header>
+  <main>
+    <section class="watch-online">
+      <div class="watch-online-wrap">
+        <h2>Watch your favorite animal online</h2>
+        <div class="animals-gallery-wrap">
+          <ul class="animals-gallery">
+            <li class="gallery-item gallery-item-hidden-start gallery-item-empty">
+            </li>
+            <li class="gallery-item gallery-item-prev">
+              <article class="animal-card">
+                <img src="../../assets/eagle.png" alt="Eagle">
+                <div class="animal-card-description">
+                  <p class="animal-card-text">Eagle’s name is Vincent. He is 3 years old. Vincent is from America. He
+                    loves life.</p>
+                  <a class="watch-btn-small" href="../zoos/eagle.html">Watch online</a>
+                  <button class="donate-btn-small">Donate</button>
+                </div>
+              </article>
+            </li>
+            <li class="gallery-item gallery-item-active">
+              <article class="animal-card">
+                <img src="../../assets/panda.png" alt="Panda">
+                <div class="animal-card-description">
+                  <p class="animal-card-text">Panda’s name is Bei Bei. He is 2 years old. Bei Bei is from China. He
+                    loves
+                    bamboos.</p>
+                  <a class="watch-btn-small" href="../zoos/panda.html">Watch online</a>
+                  <button class="donate-btn-small">Donate</button>
+                </div>
+              </article>
+            </li>
+            <li class="gallery-item gallery-item-next">
+              <article class="animal-card">
+                <img src="../../assets/gorilla.png" alt="Gorilla">
+                <div class="animal-card-description">
+                  <p class="animal-card-text">Gorilla’s name is Alexander. He is 10 years old. Alexander is from
+                    Florida. He loves parties.</p>
+                  <a class="watch-btn-small" href="../zoos/gorilla.html">Watch online</a>
+                  <button class="donate-btn-small">Donate</button>
+                </div>
+              </article>
+            </li>
+            <li class="gallery-item gallery-item-next-second">
+              <article class="animal-card">
+                <img src="../../assets/alligator.png" alt="Alligator">
+                <div class="animal-card-description">
+                  <p class="animal-card-text">Alligator's name is Alfred. He is 11 years old. Alfred is from China. He
+                    loves to bathe and chill.</p>
+                  <a class="watch-btn-small" href="../zoos/alligator.html">Watch online</a>
+                  <button class="donate-btn-small">Donate</button>
+                </div>
+              </article>
+            </li>
+            <li class="gallery-item gallery-item-next-third">
+              <article class="animal-card"><img src="../../assets/fox.png" alt="Fox">
+                <div class="animal-card-description">
+                  <p class="animal-card-text">Fox’s name is Henry. He is 3 years old. Henry is from Russia.</p>
+                  <a class="watch-btn-small" href="../zoos/fox.html">Watch online</a>
+                  <button class="donate-btn-small">Donate</button>
+                </div>
+              </article>
+            </li>
+            <li class="gallery-item gallery-item-hidden-end">
+              <article class="animal-card">
+                <img src="../../assets/elephant.png" alt="Elephant">
+                <div class="animal-card-description">
+                  <p class="animal-card-text">Elephant's name is Jesus. He is 15 years old. Jesus is from Africa.</p>
+                  <a class="watch-btn-small" href="../zoos/elephant.html">Watch online</a>
+                  <button class="donate-btn-small">Donate</button>
+                </div>
+              </article>
+            </li>
+          </ul>
+          <div class="slider-wrap">
+            <output class="slider-value">02/<span class="slider-value-total">08</span></output>
+            <input class="slider" id="slider" type="range" min="1" max="8" value="2">
+          </div>
+        </div>
+        <a class="btn-link" href="../zoos/panda.html"><button class="btn-big watch-btn">Watch online</button></a>
+        <ul class="social-links">
+          <li><a class="social-link instagram" href="https://www.instagram.com/" title="Instagram" target="_blank"></a>
+          </li>
+          <li><a class="social-link twitter" href="https://twitter.com/" title="Twitter" target="_blank"></a></li>
+          <li><a class="social-link youtube" href="https://youtube.com/" title="Youtube" target="_blank"></a></li>
+          <li><a class="social-link vk" href="https://vk.com/" title="VK" target="_blank"></a></li>
+        </ul>
+      </div>
+    </section>
+    <section class="how-it-works">
+      <div class="how-it-works-wrap">
+        <h3 class="how-it-works-title">How it works?</h3>
+        <p class="how-it-works-text">As a voice for wildlife, we are devastated by the impact of the 2020 Australian
+          bushfires on precious species
+          and their habitat, and we are determined to assist in all aspects, including providing veterinary support and
+          raising much-needed emergency funds. Zoo Online saves wildlife and inspires everyone to make conservation a
+          priority in their lives. Animals have the right to a pain-free and happy life. They have equal claim to the
+          resources of this planet, and deserve a life of dignity and compassion.As a voice for wildlife, we are
+          devastated by the impact of the 2020 Australian bushfires on precious species and their habitat.</p>
+        <img class="how-it-works-image" src="../../assets/how-it-works-1.png" alt="Deers">
+        <div class="slider-wrap">
+          <span class="slider-value dark">01/<span class="slider-value-total">04</span></span>
+          <input class="slider dark" id="slider" type="range" min="1" max="4" value="1">
+        </div>
+        <a class="btn-link" href="../zoos/panda.html"><button class="btn-big watch-btn">Watch online</button></a>
+      </div>
+    </section>
+    <section class="what-inspires">
+      <div class="what-inspires-wrap">
+        <ul class="inspire-list">
+          <li class="inspire-card">
+            <img class="inspire-card-icon" src="../../assets/icon-inspire.svg" alt="">
+            <h5>What inspires us?</h5>
+            <p class="inspire-card-text">As a voice for wildlife, we are devastated by the impact of the 2020 Australian
+              bushfires on precious
+              species and their habitat, and we are determined to assist in all aspects.</p>
+          </li>
+          <li class="inspire-card">
+            <img class="inspire-card-icon" src="../../assets/icon-mission.svg" alt="">
+            <h5>Our mission</h5>
+            <p class="inspire-card-text">Zoo Online saves wildlife and inspires everyone to make conservation a priority
+              in their lives.</p>
+          </li>
+          <li class="inspire-card">
+            <img class="inspire-card-icon" src="../../assets/icon-believe.svg" alt="">
+            <h5>What we believe in?</h5>
+            <p class="inspire-card-text">Animals have the right to a pain-free and happy life. They have equal claim to
+              the resources of this
+              planet, and deserve a life of dignity and compassion.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class="pets-in-zoo">
+      <div class="pets-in-zoo-wrap">
+        <h3>Pets in Zoo</h3>
+        <div class="pets-in-zoo-carousel">
+          <button class="previous-btn" id="pets-carousel-prev"></button>
+          <div class="carousel-items-displayed">
+            <ul class="carousel-items">
+              <li class="carousel-item carousel-item-active">
+                <article class="animal-card">
+                  <img src="../../assets/panda.png" alt="Panda">
+                  <div class="animal-card-description">
+                    <p class="animal-card-text">Panda’s name is Bei Bei. He is 2 years old. Bei Bei is from China. He
+                      loves
+                      bamboos.</p>
+                    <a class="watch-btn-small" href="../zoos/panda.html">Watch online</a>
+                    <button class="donate-btn-small">Donate</button>
+                  </div>
+                </article>
+              </li>
+              <li class="carousel-item">
+                <article class="animal-card">
+                  <img src="../../assets/eagle.png" alt="Eagle">
+                  <div class="animal-card-description">
+                    <p class="animal-card-text">Eagle’s name is Vincent. He is 3 years old. Vincent is from America. He
+                      loves life.</p>
+                    <a class="watch-btn-small" href="../zoos/eagle.html">Watch online</a>
+                    <button class="donate-btn-small">Donate</button>
+                  </div>
+                </article>
+              </li>
+              <li class="carousel-item">
+                <article class="animal-card">
+                  <img src="../../assets/gorilla.png" alt="">
+                  <div class="animal-card-description">
+                    <p class="animal-card-text">Gorilla’s name is Alexander. He is 10 years old. Alexander is from
+                      Florida. He loves to parties.</p>
+                    <a class="watch-btn-small" href="../zoos/gorilla.html">Watch online</a>
+                    <button class="donate-btn-small">Donate</button>
+                  </div>
+                </article>
+              </li>
+              <li class="carousel-item">
+                <article class="animal-card">
+                  <img src="../../assets/alligator.png" alt="Alligator">
+                  <div class="animal-card-description">
+                    <p class="animal-card-text">Alligator's name is Alfred. He is 11 years old. Alfred is from China. He
+                      loves to bathe and chill.</p>
+                    <a class="watch-btn-small" href="../zoos/alligator.html">Watch online</a>
+                    <button class="donate-btn-small">Donate</button>
+                  </div>
+                </article>
+              </li>
+              <li class="carousel-item">
+                <article class="animal-card">
+                  <img src="../../assets/fox.png" alt="Fox">
+                  <div class="animal-card-description">
+                    <p class="animal-card-text">Fox’s name is Henry. He is 3 years old. Henry is from Russia.</p>
+                    <a class="watch-btn-small" href="../zoos/fox.html">Watch online</a>
+                    <button class="donate-btn-small">Donate</button>
+                  </div>
+                </article>
+              </li>
+              <li class="carousel-item">
+                <article class="animal-card">
+                  <img src="../../assets/elephant.png" alt="Elephant">
+                  <div class="animal-card-description">
+                    <p class="animal-card-text">Elephant's name is Jesus. He is 15 years old. Jesus is from Africa.</p>
+                    <a class="watch-btn-small" href="../zoos/elephant.html">Watch online</a>
+                    <button class="donate-btn-small">Donate</button>
+                  </div>
+                </article>
+              </li>
+              <li class="carousel-item">
+                <article class="animal-card">
+                  <img src="../../assets/sloth.png" alt="Sloth">
+                  <div class="animal-card-description">
+                    <p class="animal-card-text">Sloth's name is Sid. He is 4 years old. Sid is from Central America.</p>
+                    <a class="watch-btn-small" href="../zoos/sloth.html">Watch online</a>
+                    <button class="donate-btn-small">Donate</button>
+                  </div>
+                </article>
+              </li>
+              <li class="carousel-item">
+                <article class="animal-card">
+                  <img src="../../assets/leopard.png" alt="Leopard">
+                  <div class="animal-card-description">
+                    <p class="animal-card-text">Leopard's name is Juan. He is 6 years old. Juan is from Central America.
+                    </p>
+                    <a class="watch-btn-small" href="../zoos/leopard.html">Watch online</a>
+                    <button class="donate-btn-small">Donate</button>
+                  </div>
+                </article>
+              </li>
+            </ul>
+          </div>
+          <button class="next-btn" id="pets-carousel-next"></button>
+        </div>
+        <div class="slider-wrap" id="pets-carousel-range">
+          <output class="slider-value dark" id="pets-carousel-range-output">01/<span
+              class="slider-value-total">08</span></output>
+          <input class="slider dark" id="pets-carousel-range-input" type="range" min="1" max="8" value="1">
+        </div>
+        <a class="btn-link" href="../map/map.html"><button class="btn-big choose-favorite-btn">Choose your
+            favorite</button></a>
+      </div>
+    </section>
+    <section class="pay-feed">
+      <div class="pay-feed-wrap">
+        <h3>Pay and feed</h3>
+        <p class="pay-feed-text">The opportunity to easily and naturally (but as often as possible) donate to the
+          needs of animals that you
+          like.</p>
+        <ul class="pay-feed-steps">
+          <li>
+            <div class="pay-feed-step">
+              <img src="../../assets/icon-pay.svg" alt="">
+              <p class="step-text">You pay with a VISA card</p>
+            </div>
+          </li>
+          <li class="pay-feed-arrow">
+          </li>
+          <li>
+            <div class="pay-feed-step">
+              <img src="../../assets/icon-zoo.svg" alt="">
+              <p class="step-text">Payment goes to the Zoo</p>
+            </div>
+          </li>
+          <li class="pay-feed-arrow">
+          </li>
+          <li>
+            <div class="pay-feed-step">
+              <img src="../../assets/icon-panda.svg" alt="">
+              <p class="step-text">Panda gets the bamboo</p>
+            </div>
+          </li>
+        </ul>
+        <button class="btn-big">Donate</button>
+      </div>
+    </section>
+    <section class="testimonials">
+      <div class="testimonials-wrap">
+        <h3 class="testimonials-title">Testimonials</h3>
+        <div class="testimonials-carousel">
+          <button class="previous-btn"></button>
+          <ul class="testimonial-cards">
+            <li class="testimonial-card">
+              <div class="testimonial-card-photo" src="" alt=""></div>
+              <p class="user-name">Nastya Sidorova</p>
+              <p>As a voice for wildlife, we are devastated by the impact of the 2020 Australian bushfires on precious
+                species and their habitat.</p>
+            </li>
+            <li class="testimonial-card">
+              <div class="testimonial-card-photo" src="" alt="">
+                <img src="../../assets/user-photo.jpeg" alt="Vlad Kim">
+              </div>
+              <p class="user-name">Vlad Kim</p>
+              <p>As a voice for wildlife, we are devastated by the impact of the 2020 Australian bushfires on precious
+                species and their habitat.</p>
+            </li>
+          </ul>
+          <button class="next-btn"></button>
+        </div>
+        <div class="slider-wrap">
+          <span class="slider-value dark">02/<span class="slider-value-total">08</span></span>
+          <input class="slider dark" id="slider" type="range" min="1" max="8" value="2">
+        </div>
+        <button class="btn-big feedback-btn">Leave feedback</button>
+      </div>
+    </section>
+    <section class="map">
+      <div class="map-wrap">
+        <h3 class="map-title">Map</h3>
+        <div class="map-container">
+          <div class="map-marker eagle-marker">
+            <div class="marker-icon">
+              <div class="marker-photo-wrap">
+                <img class="marker-photo" src="../../assets/eagle.png" alt="Eagle">
+              </div>
+            </div>
+            <div class="tooltip">
+              <div class="tooltip-image-wrap">
+                <img class="tooltip-image" src="../../assets/eagle.png" alt="Eagle">
+              </div>
+              <div class="tooltip-description">
+                <p class="tooltip-title">West End Bald Eagle</p>
+                <p class="tooltip-text"><b>Region:</b> on an island near Los Angeles</p>
+                <p class="tooltip-text"><b>Population:</b> more than 270 pairs in 2013</p>
+              </div>
+            </div>
+          </div>
+          <div class="map-marker alligator-marker">
+            <div class="marker-icon">
+              <div class="marker-photo-wrap">
+                <img class="marker-photo" src="../../assets/alligator.png" alt="Alligator">
+              </div>
+            </div>
+            <div class="tooltip">
+              <div class="tooltip-image-wrap">
+                <img class="tooltip-image" src="../../assets/alligator.png" alt="Alligator">
+              </div>
+              <div class="tooltip-description">
+                <p class="tooltip-title">Alligator</p>
+                <p class="tooltip-text"><b>Region:</b> Florida</p>
+                <p class="tooltip-text"><b>Population:</b> Roughly 1.25 million </p>
+              </div>
+            </div>
+          </div>
+          <div class="map-marker gorilla-marker">
+            <div class="marker-icon">
+              <div class="marker-photo-wrap">
+                <img class="marker-photo" src="../../assets/gorilla.png" alt="Gorilla">
+              </div>
+            </div>
+            <div class="tooltip tooltip-center">
+              <div class="tooltip-image-wrap">
+                <img class="tooltip-image" src="../../assets/gorilla.png" alt="Gorilla">
+              </div>
+              <div class="tooltip-description">
+                <p class="tooltip-title">Gorilla</p>
+                <p class="tooltip-text"><b>Region:</b> Cameroun</p>
+                <p class="tooltip-text"><b>Population:</b> over 100,000</p>
+              </div>
+            </div>
+          </div>
+          <div class="map-marker panda-marker">
+            <div class="marker-icon">
+              <div class="marker-photo-wrap">
+                <img class="marker-photo" src="../../assets/panda.png" alt="Panda">
+              </div>
+            </div>
+            <div class="tooltip tooltip-left">
+              <div class="tooltip-image-wrap">
+                <img class="tooltip-image" src="../../assets/panda.png" alt="Panda">
+              </div>
+              <div class="tooltip-description">
+                <p class="tooltip-title">Panda</p>
+                <p class="tooltip-text"><b>Region:</b> mountains of southwest China</p>
+                <p class="tooltip-text"><b>Population:</b> About 1,590 individuals</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <a class="btn-link" href="../zoos/panda.html"><button class="btn-big watch-btn">Watch online</button></a>
+
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="footer-wrap">
+      <a class="logo" href="../main/index.html"><img class="footer-logo" src="../../assets/logo-light.svg"
+          alt="Online Zoo"></a>
+      <nav class="nav-footer">
+        <ul class="nav-links-footer">
+          <li><a class="nav-link-footer" href="../main/index.html">About</a></li>
+          <li><a class="nav-link-footer" href="../zoos/panda.html">Zoos</a></li>
+          <li><a class="nav-link-footer" href="../map/map.html">Map</a></li>
+          <li><a class="nav-link-footer" href="https://www.figma.com/file/HKt5Nlx0jghQtJp6jW9q8F/zooApp"
+              target="_blank">Design</a></li>
+        </ul>
+      </nav>
+      <button class="btn-big for-volunteers-btn">Donate for volunteers</button>
+      <form class="contact-form" id="contact-form" action="">
+        <h4>Contact us</h4>
+        <input class="contact-input" type="text" placeholder="Name" required><br>
+        <input class="contact-input" type="email" placeholder="Email" required><br>
+        <fieldset>
+          <legend>Please enter your message</legend>
+          <textarea class="contact-textarea" id="contact-textarea" maxlength="280" required></textarea>
+        </fieldset>
+        <label class="agree-label" for="agree-checkbox">
+          <input class="agree-checkbox" type="checkbox" id="agree-checkbox" required>
+          <span class='custom-checkbox'>
+            <svg viewBox="0 0 512 512" width="100" title="check">
+              <path
+                d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z" />
+            </svg>
+          </span>
+          <span>I agree to the processing of Personal Data</span>
+        </label>
+        <button class="send-btn" type="submit">Send</button>
+      </form>
+      <div class="contacts">
+        <p class="address-title">ZOO Online Centre</p>
+        <address>
+          <p class="address-text">132, Address District, Street</p>
+          <p class="address-text">Open Daily 10:00 am - 5:00 pm</p>
+          <ul class="contact-links">
+            <li><a class="contacts-link" href="tel:+7021633433">T(702) 163-3433</a></li>
+            <li><a class="contacts-link" href="mailto:zoo.online@gmail.com">zoo.online@gmail.com</a></li>
+          </ul>
+        </address>
+        <ul class="social-links-footer">
+          <li><a class="social-link instagram" href="https://www.instagram.com/" title="Instagram" target="_blank"></a>
+          </li>
+          <li><a class="social-link twitter" href="https://twitter.com/" title="Twitter" target="_blank"></a></li>
+          <li><a class="social-link vk" href="https://youtube.com/" title="Youtube" target="_blank"></a></li>
+          <li><a class="social-link youtube" href="https://vk.com/" title="VK" target="_blank"></a></li>
+        </ul>
+      </div>
+      <div class="copyright">
+        <p class="copyright-text">©Noora Sagnayeva</p>
+        <p class="copyright-text">©RSSchool and ©Yem Digital - 2021</p>
+      </div>
+    </div>
+  </footer>
+  <script src="theme-switch.js"></script>
+  <script src="main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../main/main.css">
+  <link rel="stylesheet" href="broadcast.css">
+  <title>GRACE Gorilla Forest Corridor Cam</title>
+</head>
+
+<body>
+  <header>
+    <h1 class="visually-hidden">Online Zoo</h1>
+    <div class="header-wrap">
+      <a class="logo" href="../main/index.html">
+        <img class="header-logo" src="../../assets/logo-dark.svg" alt="Online Zoo">
+      </a>
+      <nav class="nav-wrap">
+        <label class="menu-btn" for="menu-btn-input"><span class="menu-btn-fill"></span></label>
+        <input class="menu-btn-input visually-hidden" id="menu-btn-input" type="checkbox">
+        <ul class="nav-links">
+          <li><a class="nav-link" href="../main/index.html">About</a></li>
+          <li><a class="nav-link nav-link-active" href="../zoos/panda.html">Zoos</a></li>
+          <li><a class="nav-link" href="../map/map.html">Map</a></li>
+          <li><a class="nav-link" href="#contact-form">Contact Us</a></li>
+          <li><a class="nav-link" href="https://www.figma.com/file/HKt5Nlx0jghQtJp6jW9q8F/zooApp">Design</a></li>
+        </ul>
+      </nav>
+      <label class="theme-toggle">
+        <input class="toggle-input visually-hidden" type="checkbox">
+        <span class="toggle-fill"></span>
+      </label>
+    </div>
+  </header>
+  <main class="content">
+    <aside class="nav-animals">
+      <button class="up-btn"></button>
+      <ul class="nav-animals-list">
+        <li class="nav-animals-item">
+          <a class="nav-animals-link" title="Panda" href="panda.html">
+            <img class="nav-animals-item-img" src="../../assets/panda.png" alt="Panda">
+          </a>
+        </li>
+        <li class="nav-animals-item">
+          <a class="nav-animals-link" title="Eagle" href="eagle.html">
+            <img class="nav-animals-item-img" src="../../assets/eagle.png" alt="Eagle">
+          </a>
+        </li>
+        <li class="nav-animals-item ">
+          <a class="nav-animals-link" title="Alligator" href="alligator.html">
+            <img class="nav-animals-item-img" src="../../assets/alligator.png" alt="Alligator">
+          </a>
+        </li>
+        <li class="nav-animals-item nav-animals-item--selected">
+          <a class="nav-animals-link nav-animals-link-active" title="Gorilla" href="gorilla.html">
+            <img class="nav-animals-item-img" src="../../assets/gorilla.png" alt="Gorilla">
+          </a>
+        </li>
+      </ul>
+      <button class="down-btn"></button>
+    </aside>
+    <section class="broadcast">
+      <h2 class="broadcast-heading">GRACE Gorilla Forest Corridor Cam</h2>
+      <div class="broadcast__content-wrapper">
+        <div class="broadcast__stream-wrapper">
+          <div class="broadcast__main-stream-wrapper">
+            <iframe class="broadcast__main-stream" src="https://www.youtube.com/embed/rgXWDk7rh4w?controls=0"
+              title="YouTube video player" frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen></iframe>
+          </div>
+          <ul class="broadcast__stream-list">
+            <li class="broadcast-preview-wrapper">
+              <iframe class="broadcast__stream-preview" src="https://www.youtube.com/embed/672cUSe69J0?controls=0"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+            </li>
+            <li class="broadcast-preview-wrapper">
+              <iframe class="broadcast__stream-preview" src="https://www.youtube.com/embed/rh9PwFvMS0I?controls=0"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+            </li>
+            <li class="broadcast-preview-wrapper">
+              <iframe class="broadcast__stream-preview" src="https://www.youtube.com/embed/3NkW-V_veng?controls=0"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+            </li>
+          </ul>
+          <div class="broadcast-stream-controls">
+            <button class="broadcast-btn broadcast-btn-active"></button>
+            <button class="broadcast-btn"></button>
+            <button class="broadcast-btn"></button>
+          </div>
+        </div>
+        <div class="broadcast-info">
+          <h4>Population:</h4>
+          <p>Roughly 1.25 million</p>
+          <h4>Habitat:</h4>
+          <p>Alligators can be found in slow-moving rivers, ponds, lakes and swamps.</p>
+          <h4>Diet:</h4>
+          <p>Their diets include prey species that are abundant and easily accessible. Juvenile alligators eat primarily
+            insects, amphibians, small fish, and other invertebrates. Adult alligators eat rough fish, snakes, turtles,
+            small mammals, and birds.</p>
+          <button class="btn-big feed-btn">Feed</button>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="footer-wrap">
+      <a class="logo" href="../main/index.html"><img class="footer-logo" src="../../assets/logo-light.svg"
+          alt="Online Zoo"></a>
+      <nav class="nav-footer">
+        <ul class="nav-links-footer">
+          <li><a class="nav-link-footer" href="../main/index.html">About</a></li>
+          <li><a class="nav-link-footer" href="../zoos/panda.html">Zoos</a></li>
+          <li><a class="nav-link-footer" href="../map/map.html">Map</a></li>
+          <li><a class="nav-link-footer" href="https://www.figma.com/file/HKt5Nlx0jghQtJp6jW9q8F/zooApp"
+              target="_blank">Design</a></li>
+        </ul>
+      </nav>
+      <button class="btn-big for-volunteers-btn">Donate for volunteers</button>
+      <form class="contact-form" id="contact-form" action="">
+        <h4>Contact us</h4>
+        <input class="contact-input" type="text" id="" placeholder="Name" required><br>
+        <input class="contact-input" type="email" id="" placeholder="Email" required><br>
+        <fieldset>
+          <legend>Please enter your message</legend>
+          <textarea class="contact-textarea" id="contact-textarea" maxlength="280" required></textarea>
+        </fieldset>
+        <label class="agree-label" for="agree-checkbox">
+          <input class="agree-checkbox" type="checkbox" id="agree-checkbox" required>
+          <span class='custom-checkbox'>
+            <svg viewBox="0 0 512 512" width="100" title="check">
+              <path
+                d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z" />
+            </svg>
+          </span>
+          <span>I agree to the processing of Personal Data</span>
+        </label>
+        <button class="send-btn" type="submit">Send</button>
+      </form>
+      <div class="contacts">
+        <p class="address-title">ZOO Online Centre</p>
+        <address>
+          <p class="address-text">132, Address District, Street</p>
+          <p class="address-text">Open Daily 10:00 am - 5:00 pm</p>
+          <ul class="contact-links">
+            <li><a class="contacts-link" href="tel:+7021633433">T(702) 163-3433</a></li>
+            <li><a class="contacts-link" href="mailto:zoo.online@gmail.com">zoo.online@gmail.com</a></li>
+          </ul>
+        </address>
+        <ul class="social-links-footer">
+          <li><a class="social-link instagram" href="https://www.instagram.com/" title="Instagram" target="_blank"></a>
+          </li>
+          <li><a class="social-link twitter" href="https://twitter.com/" title="Twitter" target="_blank"></a></li>
+          <li><a class="social-link vk" href="https://youtube.com/" title="Youtube" target="_blank"></a></li>
+          <li><a class="social-link youtube" href="https://vk.com/" title="VK" target="_blank"></a></li>
+        </ul>
+      </div>
+      <div class="copyright">
+        <p class="copyright-text">©Noora Sagnayeva</p>
+        <p class="copyright-text">©RSSchool and ©Yem Digital - 2021</p>
+      </div>
+    </div>
+  </footer>
+  <script src="../main/theme-switch.js"></script>
+  <script src="broadcast.js"></script>
+</body>
+
+</html>
